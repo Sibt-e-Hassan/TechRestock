@@ -1,0 +1,16 @@
+{
+  "name": "variant-tools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Rebrand + asset generation + Firestore seed tools for app variants.",
+  "scripts": {
+    "rebrand": "node rebrand.js",
+    "icon": "node generate_icon.js",
+    "store": "node generate_store_assets.js",
+    "seed": "node seed_catalog.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^14.0.0",
+    "sharp": "^0.34.0"
+  }
+}

@@ -1,0 +1,33 @@
+ThokBazaar is the wholesale ordering app built for shopkeepers. Restock your dukaan at wholesale rates — order FMCG stock in bulk, track what you owe each supplier, and never run out of your best-sellers, all from your phone.
+
+Instead of travelling to the wholesale market to restock, browse the full catalogue by category, order cartons in bulk, and send your order request in seconds.
+
+WHAT YOU CAN DO
+
+• Shop by category: Browse Dairy, Confectionery, Soaps, Shampoos, Sauces, Flour, Sugar, Pulses, Rice, Pasta, Noodles, Cooking Oil, Tea & Coffee, Beverages, Snacks, Spices, and Cleaning — with trusted brands in every aisle.
+
+• Order in bulk: Every product shows its minimum order quantity and wholesale bulk-pricing tiers — the more cartons you order, the lower your per-unit rate. Your current rate is highlighted as you change the quantity.
+
+• Order sheet: Add cartons to your order sheet, review quantities, and send a bulk order request. A ThokBazaar rep confirms price and delivery with you directly.
+
+• Khata (udhaar) ledger: Keep a running credit balance with each supplier — record goods taken on udhaar and payments made, and the outstanding balance updates automatically. Your khata stays private on your device.
+
+• Restock reminders: Set a reminder on any product to be nudged when it is time to reorder, so fast-moving stock never runs out.
+
+• Offers: See bulk deals and wholesale discounts in one place.
+
+• Orders: Keep a history of every order request you have sent.
+
+• Your account: Register your dukaan with your name and store name, update your profile, change your password, and delete your account and data any time from within the app.
+
+PLEASE NOTE
+
+ThokBazaar is a wholesale ordering and inquiry app. Order requests are non-binding — price and delivery are confirmed directly with the ThokBazaar team. Prices shown are wholesale reference rates.
+
+An internet connection is required to load the catalogue and send orders.
+
+PRIVACY
+
+We use Firebase Authentication to sign you in and Cloud Firestore to store your dukaan profile, order sheet, and order requests. Your khata and restock reminders are stored only on your device. We do not sell your data. You can delete your account and associated data at any time from the app, or by contacting us.
+
+We keep adding products, brands, and features over time. For feedback or questions, email raspharmaceutical51@gmail.com.

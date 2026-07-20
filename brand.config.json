@@ -1,0 +1,26 @@
+{
+  "_comment": "Single source of truth for a variant. Copy the base project, edit THIS file, then run the tools in docs/VARIANT_PLAYBOOK.md.",
+
+  "displayName": "ThokBazaar",
+  "tagline": "Restock your dukaan at wholesale rates.",
+  "packageId": "com.thokbazaar.app",
+  "iosBundleId": "com.thokbazaar.app",
+  "supportEmail": "raspharmaceutical51@gmail.com",
+  "firebaseProjectId": "thokbazaar-4a79a",
+  "font": "IBM Plex Sans",
+
+  "palette": {
+    "gradientStart": "#1B3A57",
+    "gradientMid": "#2C4E6E",
+    "gradientEnd": "#495867",
+    "primary": "#1B3A57",
+    "canvas": "#F4F4F2",
+    "surface": "#FFFFFF"
+  },
+
+  "rename": {
+    "_comment": "Strings present in THIS copy that rebrand.js should replace (this copy was branded 'Bazaar Connect'). Longest names first.",
+    "fromNames": ["Bazaar Connect"],
+    "fromPackage": "com.bazaarconnect.app"
+  }
+}

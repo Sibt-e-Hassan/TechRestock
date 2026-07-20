@@ -1,0 +1,7 @@
+# Copy this to android/key.properties and replace the values.
+# Do not commit android/key.properties into source control.
+
+storeFile=android/app/your-upload-key.jks
+storePassword=your-store-password
+keyAlias=your-key-alias
+keyPassword=your-key-password

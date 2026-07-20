@@ -1,0 +1,66 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    function isOwnOrder() {
+      return isSignedIn() && resource.data.userId == request.auth.uid;
+    }
+
+    function isOwnNewOrder() {
+      return isSignedIn()
+        && request.resource.data.userId == request.auth.uid
+        && request.resource.data.userId is string
+        && request.resource.data.items is list
+        && request.resource.data.totalPrice is string
+        && request.resource.data.itemCount is int
+        && request.resource.data.status is string;
+    }
+
+    // Public catalog (read-only for clients; manage via Firebase Console / Admin SDK)
+    match /markets/{marketId} {
+      allow read: if isSignedIn();
+      allow write: if false;
+    }
+
+    match /shops/{shopId} {
+      allow read: if isSignedIn();
+      allow write: if false;
+    }
+
+    match /products/{productId} {
+      allow read: if isSignedIn();
+      allow write: if false;
+    }
+
+    // User profile
+    match /users/{userId} {
+      allow read, write: if isOwner(userId);
+
+      match /cart/{cartItemId} {
+        allow read, write: if isOwner(userId);
+      }
+    }
+
+    // Inquiries / orders (immutable after submit; user may delete own on account removal)
+    match /orders/{orderId} {
+      allow read: if isOwnOrder();
+      allow create: if isOwnNewOrder();
+      allow update: if false;
+      allow delete: if isOwnOrder();
+    }
+
+    // Deny all other paths (_meta, _connection_tests, legacy collections, etc.)
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

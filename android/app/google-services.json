@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "395999364947",
+    "project_id": "thokbazaar-4a79a",
+    "storage_bucket": "thokbazaar-4a79a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:395999364947:android:39ef58eb70e27b6a5583a6",
+        "android_client_info": {
+          "package_name": "com.thokbazaar.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxHcMlziG_PIIIxQ0b8A3SiJIb_HIM5vU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
