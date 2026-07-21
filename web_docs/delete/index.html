@@ -3,149 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Bazaar Connect Account & Data Deletion — how to permanently delete your account and what data is removed." />
-  <title>Account Deletion — Bazaar Connect</title>
+  <meta name="description" content="How to delete your ThokBazaar account and data." />
+  <title>Account &amp; Data Deletion — ThokBazaar</title>
   <style>
-    :root {
-      --text: #1a1a1a;
-      --muted: #5c5c5c;
-      --accent: #6D5CF0;
-      --bg: #f8f9fa;
-      --card: #ffffff;
-      --border: #e5e7eb;
-    }
+    :root { --text:#1F2933; --muted:#52606D; --accent:#1B3A57; --gold:#D4A017; --bg:#F4F4F2; --card:#fff; --border:#DDE1E6; }
     * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.65;
-      color: var(--text);
-      background: var(--bg);
-    }
-    header {
-      background: linear-gradient(135deg, #6D5CF0 0%, #4B2FD6 100%);
-      color: #fff;
-      padding: 2.5rem 1.5rem;
-      text-align: center;
-    }
-    header h1 { margin: 0 0 0.5rem; font-size: 1.75rem; font-weight: 700; }
-    header p { margin: 0; opacity: 0.9; font-size: 0.95rem; }
-    main {
-      max-width: 720px;
-      margin: -1.5rem auto 3rem;
-      padding: 0 1rem;
-    }
-    article {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 2rem 1.75rem;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
-    }
-    h2 { font-size: 1.15rem; margin: 1.75rem 0 0.75rem; color: var(--accent); }
-    h2:first-of-type { margin-top: 0; }
-    p, li { color: var(--muted); font-size: 0.95rem; }
-    ul { padding-left: 1.25rem; }
-    a { color: var(--accent); }
-    .steps { counter-reset: step; list-style: none; padding-left: 0; }
-    .steps li { position: relative; padding-left: 2.25rem; margin-bottom: 0.75rem; }
-    .steps li::before {
-      counter-increment: step;
-      content: counter(step);
-      position: absolute;
-      left: 0;
-      top: 0.05rem;
-      width: 1.5rem;
-      height: 1.5rem;
-      background: var(--accent);
-      color: #fff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.8rem;
-      font-weight: 700;
-    }
-    .note {
-      background: #f3f1fe;
-      border-left: 3px solid var(--accent);
-      border-radius: 8px;
-      padding: 0.85rem 1rem;
-      margin: 1rem 0;
-    }
-    .note p { color: var(--text); margin: 0; }
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; line-height:1.65; color:var(--text); background:var(--bg); }
+    header { background:linear-gradient(135deg,#1B3A57 0%,#12293D 100%); color:#fff; padding:2.5rem 1.5rem; text-align:center; }
+    header h1 { margin:0 0 .5rem; font-size:1.6rem; font-weight:800; }
+    header p { margin:0; opacity:.85; font-size:.95rem; }
+    header .bar { width:56px; height:4px; background:var(--gold); border-radius:2px; margin:1rem auto 0; }
+    main { max-width:720px; margin:-1.5rem auto 3rem; padding:0 1rem; }
+    article { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:1.75rem 1.5rem; box-shadow:0 8px 24px rgba(27,58,87,.06); }
+    h2 { font-size:1.15rem; margin:1.75rem 0 .5rem; color:var(--accent); }
+    h2:first-child { margin-top:0; }
+    a { color:var(--accent); font-weight:600; }
+    ol, ul { padding-left:1.2rem; }
+    li { margin:.25rem 0; }
+    .box { background:#EDEDE9; border-radius:10px; padding:1rem 1.2rem; margin:1rem 0; }
+    footer { text-align:center; color:var(--muted); font-size:.85rem; padding:1rem; }
+    .updated { display:inline-block; background:#EDEDE9; color:var(--muted); padding:.25rem .7rem; border-radius:999px; font-size:.8rem; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Bazaar Connect</h1>
-    <p>Account &amp; Data Deletion</p>
+    <h1>Account &amp; Data Deletion</h1>
+    <p>ThokBazaar</p>
+    <div class="bar"></div>
   </header>
   <main>
     <article>
-      <p><strong>Last updated:</strong> July 16, 2026</p>
-      <p>
-        This page explains how you can request the deletion of your Bazaar Connect account and
-        associated data, what data is deleted, and what (if anything) is retained.
-        Bazaar Connect is a marketplace discovery and inquiry app; the developer can be reached at
-        <a href="mailto:raxyshan@gmail.com">raxyshan@gmail.com</a>.
-      </p>
+      <p><span class="updated">Last updated: 21 July 2026</span></p>
+      <p>This page explains how to delete your ThokBazaar account and what data is removed, in line with Google Play's data-deletion requirements.</p>
 
-      <h2>Option 1 — Delete from within the app (instant)</h2>
-      <ul class="steps">
-        <li>Open the <strong>Bazaar Connect</strong> app and sign in.</li>
-        <li>Go to the <strong>Account</strong> tab.</li>
+      <h2>Delete your account from the app</h2>
+      <ol>
+        <li>Open ThokBazaar and sign in.</li>
+        <li>Go to the <strong>Profile / Account</strong> tab.</li>
         <li>Tap <strong>Delete account</strong>.</li>
-        <li>Confirm with your password. Your account and data are removed immediately.</li>
-      </ul>
+        <li>Confirm with your password. Your account and data are deleted immediately.</li>
+      </ol>
 
-      <h2>Option 2 — Request deletion by email</h2>
-      <p>
-        If you can no longer access the app, email
-        <a href="mailto:raxyshan@gmail.com?subject=Bazaar%20Connect%20account%20deletion%20request">raxyshan@gmail.com</a>
-        from the email address associated with your account, with the subject
-        “Bazaar Connect account deletion request.” We will verify your identity and process the
-        request within <strong>30 days</strong>.
-      </p>
-
-      <h2>What data is deleted</h2>
-      <p>When your account is deleted, the following are permanently removed:</p>
-      <ul>
-        <li>Your sign-in account (email and authentication credentials).</li>
-        <li>Your profile record (full name, email, display name, and preferences).</li>
-        <li>Your saved cart items.</li>
-        <li>Your inquiry / order records linked to your user ID.</li>
-      </ul>
-
-      <h2>What data is retained</h2>
-      <p>
-        Bazaar Connect does not sell your data or use it for advertising. After account deletion,
-        we do not retain personal data tied to your account, except where a short retention period
-        is required by law or to prevent fraud and abuse. Any such records are kept no longer than
-        <strong>90 days</strong> and are then permanently erased. Anonymised, aggregated statistics
-        that cannot identify you may be retained.
-      </p>
-
-      <div class="note">
-        <p><strong>Note:</strong> The public catalog of markets, shops, and products is not personal
-        data and is unaffected by account deletion. Account deletion cannot be undone.</p>
+      <h2>Request deletion by email</h2>
+      <p>If you cannot access the app, email us from your registered email address and we will delete your account and associated data:</p>
+      <div class="box">
+        <strong>Email:</strong> <a href="mailto:raspharmaceutical51@gmail.com">raspharmaceutical51@gmail.com</a><br />
+        <strong>Subject:</strong> Delete my ThokBazaar account
       </div>
+      <p>We process email deletion requests within 30 days.</p>
+
+      <h2>What gets deleted</h2>
+      <ul>
+        <li>Your sign-in account (Firebase Authentication).</li>
+        <li>Your profile — name, dukaan (store) name, and email — stored in our database.</li>
+        <li>Your order-request records linked to your account.</li>
+      </ul>
+
+      <h2>Data stored only on your device</h2>
+      <p>Your <strong>Khata</strong> (supplier credit ledger) and <strong>restock reminders</strong> are stored only on your device, not on our servers. They are removed when you delete the account, clear the app's data, or uninstall ThokBazaar. Nothing about them is retained by us.</p>
+
+      <h2>What we retain</h2>
+      <p>After deletion we do not retain your personal data, except where required by law. Anonymous, aggregated records that cannot identify you may be kept for analytics.</p>
 
       <h2>Contact</h2>
-      <p>
-        For any questions about account or data deletion, contact us at
-        <a href="mailto:raxyshan@gmail.com">raxyshan@gmail.com</a>.
-      </p>
+      <p>Questions about deletion? Email <a href="mailto:raspharmaceutical51@gmail.com">raspharmaceutical51@gmail.com</a>. See also our <a href="/privacy">Privacy Policy</a> and <a href="/terms">Terms of Service</a>.</p>
     </article>
   </main>
-  <footer>
-    <p>&copy; 2026 Bazaar Connect. All rights reserved.</p>
-  </footer>
+  <footer>© 2026 ThokBazaar. All rights reserved.</footer>
 </body>
 </html>
