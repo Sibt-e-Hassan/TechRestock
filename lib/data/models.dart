@@ -195,7 +195,6 @@ class CartLineItem {
       'shopName': product.shopName,
       'priceLabel': product.priceLabel,
       if (product.shopId != null) 'shopId': product.shopId,
-      if (product.imageUrl != null) 'imageUrl': product.imageUrl,
       if (product.country != null) 'country': product.country,
       if (product.city != null) 'city': product.city,
       if (product.badge != null) 'badge': product.badge,
@@ -340,6 +339,7 @@ class KhataSupplier {
     required this.name,
     required this.market,
     this.phone,
+    this.imageUrl,
     this.entries = const [],
   });
 
@@ -349,6 +349,9 @@ class KhataSupplier {
   /// Wholesale market the supplier trades from, e.g. "Jodia Bazaar".
   final String market;
   final String? phone;
+
+  /// Local-only avatar URL (SharedPreferences); not stored in Firestore.
+  final String? imageUrl;
   final List<KhataEntry> entries;
 
   /// Outstanding udhaar in Rs: purchases minus payments. Positive = you owe
@@ -363,11 +366,16 @@ class KhataSupplier {
     return list;
   }
 
-  KhataSupplier copyWith({List<KhataEntry>? entries}) => KhataSupplier(
+  KhataSupplier copyWith({
+    List<KhataEntry>? entries,
+    String? imageUrl,
+  }) =>
+      KhataSupplier(
         id: id,
         name: name,
         market: market,
         phone: phone,
+        imageUrl: imageUrl ?? this.imageUrl,
         entries: entries ?? this.entries,
       );
 
@@ -376,6 +384,7 @@ class KhataSupplier {
         'name': name,
         'market': market,
         if (phone != null) 'phone': phone,
+        if (imageUrl != null) 'imageUrl': imageUrl,
         'entries': entries.map((e) => e.toJson()).toList(),
       };
 
@@ -392,6 +401,7 @@ class KhataSupplier {
       name: (json['name'] ?? '') as String,
       market: (json['market'] ?? '') as String,
       phone: json['phone'] as String?,
+      imageUrl: json['imageUrl'] as String?,
       entries: entries,
     );
   }

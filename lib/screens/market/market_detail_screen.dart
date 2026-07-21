@@ -2,11 +2,13 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shop_pandaa/app.dart';
+import 'package:shop_pandaa/data/media_urls.dart';
 import 'package:shop_pandaa/data/models.dart';
 import 'package:shop_pandaa/theme/app_colors.dart';
 import 'package:shop_pandaa/theme/app_theme.dart';
 import 'package:shop_pandaa/widgets/app_card.dart';
 import 'package:shop_pandaa/widgets/gradient_scaffold.dart';
+import 'package:shop_pandaa/widgets/product_network_image.dart';
 import 'package:shop_pandaa/widgets/section_head.dart';
 
 class MarketDetailScreen extends StatefulWidget {
@@ -428,15 +430,15 @@ class _ShopListTile extends StatelessWidget {
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(12),
-                  child: shop.imageUrl != null && shop.imageUrl!.isNotEmpty
-                      ? Image.network(
-                          shop.imageUrl!,
-                          width: 72,
-                          height: 72,
-                          fit: BoxFit.cover,
-                          errorBuilder: (_, __, ___) => _imagePlaceholder(),
-                        )
-                      : _imagePlaceholder(),
+                  child: SizedBox(
+                    width: 72,
+                    height: 72,
+                    child: ProductNetworkImage(
+                      imageUrl: MediaUrls.shop(shop) ?? shop.imageUrl,
+                      borderRadius: BorderRadius.circular(12),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
                 ),
                 const SizedBox(width: 14),
                 Expanded(
@@ -503,23 +505,6 @@ class _ShopListTile extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-
-  Widget _imagePlaceholder() {
-    return Container(
-      width: 72,
-      height: 72,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        gradient: LinearGradient(
-          colors: [
-            AppColors.primarySoft.withValues(alpha: 0.6),
-            AppColors.bgMid.withValues(alpha: 0.8),
-          ],
-        ),
-      ),
-      child: const Icon(Icons.storefront, color: AppColors.teal, size: 28),
     );
   }
 }

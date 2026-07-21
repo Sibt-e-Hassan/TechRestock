@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shop_pandaa/app.dart';
 import 'package:shop_pandaa/data/categories.dart';
+import 'package:shop_pandaa/data/media_urls.dart';
 import 'package:shop_pandaa/data/models.dart';
 import 'package:shop_pandaa/screens/category/category_products_screen.dart';
 import 'package:shop_pandaa/theme/app_colors.dart';
@@ -448,7 +449,7 @@ class _HProductCard extends StatelessWidget {
                     SizedBox(
                       height: 104,
                       child: ProductNetworkImage(
-                        imageUrl: product.imageUrl,
+                        imageUrl: MediaUrls.product(product) ?? product.imageUrl,
                         borderRadius: BorderRadius.zero,
                         fit: BoxFit.cover,
                       ),

@@ -5,6 +5,7 @@ import 'package:shop_pandaa/app.dart';
 import 'package:shop_pandaa/data/models.dart';
 import 'package:shop_pandaa/theme/app_colors.dart';
 import 'package:shop_pandaa/theme/app_theme.dart';
+import 'package:shop_pandaa/widgets/brand_logo.dart';
 import 'package:shop_pandaa/widgets/product_card.dart';
 
 /// Offers tab — bulk deals and badged products across the ThokBazaar catalog.
@@ -35,6 +36,8 @@ class OffersScreen extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(20, 10, 20, 18),
                 child: Row(
                   children: [
+                    const BrandLogo(size: 44, borderRadius: 12),
+                    const SizedBox(width: 12),
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,

@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'package:shop_pandaa/data/media_urls.dart';
 import 'package:shop_pandaa/data/models.dart';
 
 /// Device-local store for the shopkeeper's khata (running supplier credit).
@@ -15,6 +16,8 @@ class KhataService extends ChangeNotifier {
 
   static const _prefsKey = 'thokbazaar_khata_v1';
   static const _seededKey = 'thokbazaar_khata_seeded_v1';
+  static const _dataVersionKey = 'thokbazaar_khata_data_version';
+  static const _currentDataVersion = 2;
 
   List<KhataSupplier> _suppliers = const [];
   bool _loaded = false;
@@ -31,7 +34,18 @@ class KhataService extends ChangeNotifier {
     final prefs = await SharedPreferences.getInstance();
     final raw = prefs.getString(_prefsKey);
     if (raw != null) {
-      _suppliers = _decode(raw);
+      final decoded = _decode(raw);
+      final hydrated = _hydrateSupplierImages(decoded);
+      _suppliers = hydrated;
+      if (_needsImagePersist(decoded, hydrated)) {
+        await _persist();
+      }
+      final dataVersion = prefs.getInt(_dataVersionKey) ?? 1;
+      if (dataVersion < _currentDataVersion) {
+        _suppliers = _applySeedSupplierUpdates(_suppliers);
+        await prefs.setInt(_dataVersionKey, _currentDataVersion);
+        await _persist();
+      }
     } else if (!(prefs.getBool(_seededKey) ?? false)) {
       _suppliers = _sampleSuppliers();
       await prefs.setBool(_seededKey, true);
@@ -117,11 +131,44 @@ class KhataService extends ChangeNotifier {
     return const [];
   }
 
+  static List<KhataSupplier> _hydrateSupplierImages(List<KhataSupplier> list) {
+    return list.map((supplier) {
+      if (supplier.imageUrl?.trim().isNotEmpty == true) {
+        return supplier;
+      }
+      final url = MediaUrls.khataSupplierById(supplier.id);
+      if (url == null) {
+        return supplier;
+      }
+      return supplier.copyWith(imageUrl: url);
+    }).toList();
+  }
+
+  static bool _needsImagePersist(
+    List<KhataSupplier> before,
+    List<KhataSupplier> after,
+  ) {
+    if (before.length != after.length) {
+      return false;
+    }
+    for (var i = 0; i < before.length; i++) {
+      if (before[i].imageUrl != after[i].imageUrl) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   static String _newId(String prefix) =>
       '${prefix}_${DateTime.now().microsecondsSinceEpoch}';
 
-  /// A few realistic Pakistani wholesale suppliers so the ledger is useful on
-  /// first launch (a shopkeeper can clear these and add their own).
+  static List<KhataSupplier> _applySeedSupplierUpdates(List<KhataSupplier> list) {
+    final fresh = {for (final s in _sampleSuppliers()) s.id: s};
+    return list.map((s) => fresh[s.id] ?? s).toList();
+  }
+
+  /// Pakistani wholesale suppliers seeded on first launch. Markets are real
+  /// wholesale hubs; trader names are illustrative (not tied to any business).
   static List<KhataSupplier> _sampleSuppliers() {
     final now = DateTime.now();
     KhataEntry p(String id, String note, int amt, int daysAgo) => KhataEntry(
@@ -142,31 +189,35 @@ class KhataService extends ChangeNotifier {
     return [
       KhataSupplier(
         id: 'seed_sup_1',
-        name: 'Al-Karam Traders',
+        name: 'Karim Oil Traders',
         market: 'Jodia Bazaar, Karachi',
-        phone: '0300 1234567',
+        phone: '+92 300 2123456',
+        imageUrl: MediaUrls.khataSupplierById('seed_sup_1'),
         entries: [
-          p('1a', '20 cartons cooking oil', 84000, 12),
-          pay('1b', 'Cash payment', 50000, 7),
-          p('1c', '10 boris sugar', 42000, 3),
+          p('1a', '20 cartons Sufi cooking oil 5L', 84000, 12),
+          pay('1b', 'Cash payment — partial', 50000, 7),
+          p('1c', '10 boris Al-Arabia refined sugar 50kg', 42000, 3),
         ],
       ),
       KhataSupplier(
         id: 'seed_sup_2',
-        name: 'Bismillah Wholesale',
+        name: 'Rehman Grain House',
         market: 'Akbari Mandi, Lahore',
-        phone: '0321 7654321',
+        phone: '+92 321 7654321',
+        imageUrl: MediaUrls.khataSupplierById('seed_sup_2'),
         entries: [
-          p('2a', '15 cartons tea', 63000, 9),
-          pay('2b', 'Easypaisa transfer', 63000, 2),
+          p('2a', '15 cartons Tapal Danedar tea 900g', 63000, 9),
+          pay('2b', 'Easypaisa transfer — full settlement', 63000, 2),
         ],
       ),
       KhataSupplier(
         id: 'seed_sup_3',
-        name: 'Sindh Provisions',
-        market: 'Sharea Faisal, Karachi',
+        name: 'Bolton Market Provisions',
+        market: 'Bolton Market, Karachi',
+        phone: '+92 333 4455667',
+        imageUrl: MediaUrls.khataSupplierById('seed_sup_3'),
         entries: [
-          p('3a', '30 dozen soap', 27000, 5),
+          p('3a', '30 dozen Lifebuoy soap 130g', 27000, 5),
         ],
       ),
     ];

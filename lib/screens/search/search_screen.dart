@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:shop_pandaa/app.dart';
+import 'package:shop_pandaa/data/media_urls.dart';
 import 'package:shop_pandaa/data/models.dart';
 import 'package:shop_pandaa/theme/app_colors.dart';
 import 'package:shop_pandaa/theme/app_theme.dart';
 import 'package:shop_pandaa/utils/catalog_search.dart';
 import 'package:shop_pandaa/widgets/filter_chip.dart';
+import 'package:shop_pandaa/widgets/brand_logo.dart';
 import 'package:shop_pandaa/widgets/gradient_scaffold.dart';
 import 'package:shop_pandaa/widgets/product_card.dart';
 import 'package:shop_pandaa/widgets/product_network_image.dart';
@@ -48,7 +50,14 @@ class _SearchScreenState extends State<SearchScreen> {
           icon: const Icon(Icons.arrow_back),
           onPressed: widget.onClose ?? () => Navigator.of(context).maybePop(),
         ),
-        title: const Text('Search'),
+        title: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const BrandLogo(size: 32, borderRadius: 8),
+            const SizedBox(width: 10),
+            Text('Search', style: Theme.of(context).textTheme.titleLarge),
+          ],
+        ),
         centerTitle: true,
         actions: [
           TextButton(
@@ -253,7 +262,7 @@ class _SearchShopTile extends StatelessWidget {
                     width: 72,
                     height: 72,
                     child: ProductNetworkImage(
-                      imageUrl: shop.imageUrl,
+                      imageUrl: MediaUrls.shop(shop) ?? shop.imageUrl,
                       borderRadius: BorderRadius.circular(12),
                       fit: BoxFit.cover,
                     ),

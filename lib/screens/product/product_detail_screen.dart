@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:shop_pandaa/data/media_urls.dart';
 import 'package:shop_pandaa/data/models.dart';
 import 'package:shop_pandaa/theme/app_colors.dart';
 import 'package:shop_pandaa/theme/app_theme.dart';
@@ -128,7 +129,7 @@ class _ProductBodyState extends State<_ProductBody> {
               fit: StackFit.expand,
               children: [
                 ProductNetworkImage(
-                  imageUrl: product.imageUrl,
+                  imageUrl: MediaUrls.product(product) ?? product.imageUrl,
                   borderRadius: BorderRadius.circular(AppTheme.radiusCard),
                 ),
                 if (product.badge != null)

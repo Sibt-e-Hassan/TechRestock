@@ -10,7 +10,7 @@ Use these collections in Firebase Console. The app reads them dynamically; no co
 | `location` | string | yes | e.g. `Karachi, Pakistan` |
 | `shopCount` | number | yes | Shown on home card |
 | `country` | string | yes | Used for country filter |
-| `imageUrl` | string | recommended | HTTPS image for home list |
+| `imageUrl` | string | legacy | Optional; ThokBazaar resolves images in-app via `lib/data/media_urls.dart` |
 | `title` | string | optional | Legacy; `name` is primary |
 | `shopName` | string | optional | Legacy subtitle |
 | `badge` | string | optional | e.g. `Trending` |
@@ -23,7 +23,7 @@ Use these collections in Firebase Console. The app reads them dynamically; no co
 | `name` | string | yes | |
 | `category` | string | yes | Grouped on market detail |
 | `marketId` | string | yes | Must match a `markets` doc id |
-| `imageUrl` | string | recommended | |
+| `imageUrl` | string | legacy | Optional; resolved in-app via `lib/data/media_urls.dart` |
 | `updatedAt` | timestamp | optional | |
 
 ## `products/{productId}`
@@ -35,7 +35,7 @@ Use these collections in Firebase Console. The app reads them dynamically; no co
 | `shopId` | string | yes | Links to `shops/{shopId}` for shop detail |
 | `priceLabel` | string | yes | e.g. `Rs 4,400` (base per-unit price, display only) |
 | `country` | string | yes | Home country filter |
-| `imageUrl` | string | recommended | |
+| `imageUrl` | string | legacy | Optional; resolved in-app via `lib/data/media_urls.dart` |
 | `badge` | string | optional | `New`, `Bulk`, etc. |
 | `unit` | string | optional | Wholesale selling unit — `carton`, `bori`, `dozen`, `kg`. Defaults to `unit`. |
 | `minOrderQty` | int | optional | Minimum order quantity (MOQ). Defaults to `1`. |

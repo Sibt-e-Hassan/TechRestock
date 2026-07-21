@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:shop_pandaa/app.dart';
+import 'package:shop_pandaa/data/media_urls.dart';
 import 'package:shop_pandaa/data/models.dart';
 import 'package:shop_pandaa/screens/order/order_result_screen.dart';
 import 'package:shop_pandaa/services/cart_service.dart';
 import 'package:shop_pandaa/theme/app_colors.dart';
 import 'package:shop_pandaa/theme/app_theme.dart';
+import 'package:shop_pandaa/widgets/brand_logo.dart';
 import 'package:shop_pandaa/widgets/cart_scope.dart';
 import 'package:shop_pandaa/widgets/gradient_scaffold.dart';
 import 'package:shop_pandaa/widgets/primary_button.dart';
@@ -158,7 +160,7 @@ class _CartLineTile extends StatelessWidget {
                 width: 72,
                 height: 72,
                 child: ProductNetworkImage(
-                  imageUrl: product.imageUrl,
+                  imageUrl: MediaUrls.product(product) ?? product.imageUrl,
                   borderRadius: BorderRadius.circular(12),
                   fit: BoxFit.cover,
                 ),
@@ -218,7 +220,7 @@ class _EmptyCart extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Icon(Icons.shopping_cart_outlined, size: 56, color: AppColors.textLight),
+            const BrandLogo(size: 48, borderRadius: 12),
             const SizedBox(height: 16),
             Text('Your order sheet is empty', style: Theme.of(context).textTheme.titleMedium),
             const SizedBox(height: 8),

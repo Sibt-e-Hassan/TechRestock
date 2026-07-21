@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:shop_pandaa/data/media_urls.dart';
 import 'package:shop_pandaa/data/models.dart';
 import 'package:shop_pandaa/services/khata_service.dart';
 import 'package:shop_pandaa/theme/app_colors.dart';
 import 'package:shop_pandaa/theme/app_theme.dart';
 import 'package:shop_pandaa/screens/khata/supplier_ledger_screen.dart';
+import 'package:shop_pandaa/widgets/brand_logo.dart';
+import 'package:shop_pandaa/widgets/product_network_image.dart';
 import 'package:shop_pandaa/widgets/primary_button.dart';
 
 /// ThokBazaar's signature screen — the khata: a running udhaar (credit)
@@ -111,6 +114,10 @@ class _KhataHeader extends StatelessWidget {
                   onPressed: () => Navigator.of(context).pop(),
                 ),
               if (showBack) const SizedBox(width: 12),
+              if (!showBack) ...[
+                const BrandLogo(size: 44, borderRadius: 12),
+                const SizedBox(width: 12),
+              ],
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -221,20 +228,15 @@ class _SupplierTile extends StatelessWidget {
             padding: const EdgeInsets.all(14),
             child: Row(
               children: [
-                Container(
-                  width: 44,
-                  height: 44,
-                  decoration: BoxDecoration(
-                    color: AppColors.primarySoft,
-                    borderRadius: BorderRadius.circular(AppTheme.radiusSm),
-                  ),
-                  alignment: Alignment.center,
-                  child: Text(
-                    supplier.name.isNotEmpty ? supplier.name[0].toUpperCase() : '?',
-                    style: AppTheme.mono(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w700,
-                      color: AppColors.teal,
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(AppTheme.radiusSm),
+                  child: SizedBox(
+                    width: 44,
+                    height: 44,
+                    child: ProductNetworkImage(
+                      imageUrl: MediaUrls.khataSupplier(supplier),
+                      borderRadius: BorderRadius.circular(AppTheme.radiusSm),
+                      fit: BoxFit.cover,
                     ),
                   ),
                 ),

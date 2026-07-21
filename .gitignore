@@ -44,11 +44,6 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-# Android signing files
-/android/key.properties
-/android/key.properties.bak
-/android/app/*.jks
-
 # Firebase Admin service account key (never commit)
 tools/service-account.json
 tools/node_modules/

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:shop_pandaa/data/models.dart';
 import 'package:shop_pandaa/theme/app_colors.dart';
 import 'package:shop_pandaa/theme/app_theme.dart';
+import 'package:shop_pandaa/widgets/brand_logo.dart';
 import 'package:shop_pandaa/widgets/gradient_scaffold.dart';
 class OrdersScreen extends StatelessWidget {
   const OrdersScreen({super.key, this.showBack = true});
@@ -42,7 +43,16 @@ class OrdersScreen extends StatelessWidget {
                 onPressed: () => Navigator.of(context).pop(),
               )
             : null,
-        title: const Text('My orders'),
+        title: showBack
+            ? const Text('My orders')
+            : const Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  BrandLogo(size: 32, borderRadius: 8),
+                  SizedBox(width: 10),
+                  Text('My orders'),
+                ],
+              ),
         centerTitle: true,
       ),
       body: user == null
@@ -185,7 +195,7 @@ class _EmptyOrders extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Icon(Icons.receipt_long_outlined, size: 56, color: AppColors.textLight),
+            const BrandLogo(size: 48, borderRadius: 12),
             const SizedBox(height: 16),
             Text('No orders yet', style: Theme.of(context).textTheme.titleMedium),
             const SizedBox(height: 8),

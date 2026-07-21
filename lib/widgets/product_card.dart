@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shop_pandaa/data/media_urls.dart';
 import 'package:shop_pandaa/data/models.dart';
 import 'package:shop_pandaa/theme/app_colors.dart';
 import 'package:shop_pandaa/theme/app_theme.dart';
@@ -36,7 +37,9 @@ class ProductCard extends StatelessWidget {
                   child: Stack(
                     fit: StackFit.expand,
                     children: [
-                      ProductNetworkImage(imageUrl: product.imageUrl),
+                      ProductNetworkImage(
+                        imageUrl: MediaUrls.product(product) ?? product.imageUrl,
+                      ),
                       if (product.badge != null)
                         Positioned(
                           top: 10,
@@ -143,7 +146,7 @@ class MarketListTile extends StatelessWidget {
                     width: 72,
                     height: 72,
                     child: ProductNetworkImage(
-                      imageUrl: market.imageUrl,
+                      imageUrl: MediaUrls.market(market) ?? market.imageUrl,
                       borderRadius: BorderRadius.circular(12),
                       fit: BoxFit.cover,
                     ),

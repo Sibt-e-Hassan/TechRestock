@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:shop_pandaa/data/media_urls.dart';
 import 'package:shop_pandaa/data/models.dart';
 import 'package:shop_pandaa/services/khata_service.dart';
 import 'package:shop_pandaa/theme/app_colors.dart';
 import 'package:shop_pandaa/theme/app_theme.dart';
 import 'package:shop_pandaa/widgets/gradient_scaffold.dart';
 import 'package:shop_pandaa/widgets/primary_button.dart';
+import 'package:shop_pandaa/widgets/product_network_image.dart';
 
 /// Per-supplier khata: the running ledger of purchases (udhaar taken) and
 /// payments made, with the outstanding balance at the top.
@@ -84,16 +86,45 @@ class _SupplierLedgerScreenState extends State<SupplierLedgerScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(supplier.name,
-                                style: Theme.of(context).textTheme.titleLarge),
-                            const SizedBox(height: 2),
-                            Text(supplier.market,
-                                style: Theme.of(context).textTheme.bodyMedium),
-                            if (supplier.phone != null) ...[
-                              const SizedBox(height: 2),
-                              Text('☎ ${supplier.phone}',
-                                  style: Theme.of(context).textTheme.bodySmall),
-                            ],
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                SizedBox(
+                                  width: 52,
+                                  height: 52,
+                                  child: ProductNetworkImage(
+                                    imageUrl: MediaUrls.khataSupplier(supplier),
+                                    borderRadius:
+                                        BorderRadius.circular(AppTheme.radiusSm),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                                const SizedBox(width: 12),
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        supplier.name,
+                                        style: Theme.of(context).textTheme.titleLarge,
+                                      ),
+                                      const SizedBox(height: 2),
+                                      Text(
+                                        supplier.market,
+                                        style: Theme.of(context).textTheme.bodyMedium,
+                                      ),
+                                      if (supplier.phone != null) ...[
+                                        const SizedBox(height: 2),
+                                        Text(
+                                          '☎ ${supplier.phone}',
+                                          style: Theme.of(context).textTheme.bodySmall,
+                                        ),
+                                      ],
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
                             const Divider(height: 26, color: AppColors.borderInput),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,

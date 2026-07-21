@@ -43,6 +43,8 @@ const markets = [
 // `unit`, `minOrderQty`, optional `priceTiers` (bulk breaks), and an optional
 // `badge` (shows in the Offers tab). `shopName` mirrors `brand` for the legacy
 // display fallback.
+// Product images shown in the app are resolved per product id in
+// lib/data/media_urls.dart (_byProductId) — not stored in Firestore.
 const IMG = {
   dairy: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=800&q=80",
   confection: "https://images.unsplash.com/photo-1548907040-4baa42d10919?w=800&q=80",

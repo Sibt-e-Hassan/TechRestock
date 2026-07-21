@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shop_pandaa/screens/orders/orders_screen.dart';
 import 'package:shop_pandaa/theme/app_colors.dart';
 import 'package:shop_pandaa/theme/app_theme.dart';
+import 'package:shop_pandaa/widgets/brand_logo.dart';
 import 'package:shop_pandaa/widgets/gradient_scaffold.dart';
 import 'package:shop_pandaa/widgets/primary_button.dart';
 
@@ -48,6 +49,8 @@ class OrderResultScreen extends StatelessWidget {
           child: Column(
             children: [
               const Spacer(),
+              const BrandLogo(size: 40, borderRadius: 10),
+              const SizedBox(height: 20),
               success ? const _SuccessMark() : const _FailureMark(),
               const SizedBox(height: 28),
               Text(
