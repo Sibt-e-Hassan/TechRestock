@@ -69,13 +69,6 @@ const List<({String heading, String body})> kHelpSections = [
         'per-unit rate. Your current rate is highlighted on the product screen.'
   ),
   (
-    heading: 'Khata (udhaar)',
-    body:
-        'Use the Khata tab to keep a running balance with each supplier. Record '
-        'goods taken on udhaar and payments made; the outstanding balance updates '
-        'automatically. Your khata is stored privately on your device.'
-  ),
-  (
     heading: 'Restock reminders',
     body:
         'Set a reminder on any product to be nudged when it is time to reorder, so '
@@ -93,8 +86,7 @@ const List<({String heading, String body})> kAboutSections = [
     heading: 'ThokBazaar',
     body:
         'Wholesale ordering for shopkeepers. Restock your dukaan at wholesale '
-        'rates — order FMCG stock in bulk, track supplier credit, and never run '
-        'out of your best-sellers.'
+        'rates — order FMCG stock in bulk and never run out of your best-sellers.'
   ),
   (
     heading: 'Who it is for',

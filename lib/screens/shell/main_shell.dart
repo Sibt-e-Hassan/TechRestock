@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:shop_pandaa/app.dart';
 import 'package:shop_pandaa/screens/account/profile_screen.dart';
 import 'package:shop_pandaa/screens/home/home_screen.dart';
-import 'package:shop_pandaa/screens/khata/khata_screen.dart';
 import 'package:shop_pandaa/screens/offers/offers_screen.dart';
 import 'package:shop_pandaa/screens/orders/orders_screen.dart';
 import 'package:shop_pandaa/screens/search/search_screen.dart';
@@ -52,7 +51,6 @@ class _MainShellState extends State<MainShell> {
                 Navigator.of(context).pushNamed(ShoppandaApp.cartRoute),
           ),
           const OffersScreen(),
-          const KhataScreen(showBack: false),
           const OrdersScreen(showBack: false),
           ProfileScreen(openLegalOnMount: _openLegal),
         ],

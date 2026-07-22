@@ -43,8 +43,7 @@ const markets = [
 // `unit`, `minOrderQty`, optional `priceTiers` (bulk breaks), and an optional
 // `badge` (shows in the Offers tab). `shopName` mirrors `brand` for the legacy
 // display fallback.
-// Product images shown in the app are resolved per product id in
-// lib/data/media_urls.dart (_byProductId) — not stored in Firestore.
+// Product images and display names: lib/data/catalog_display.dart (_manifest).
 const IMG = {
   dairy: "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=800&q=80",
   confection: "https://images.unsplash.com/photo-1548907040-4baa42d10919?w=800&q=80",
@@ -75,95 +74,95 @@ function wp(id, category, brand, title, price, unit, moq, image, badge = null, t
 
 const products = [
   // --- Dairy Products ---
-  wp("prod_dairy_olpers_milk", "Dairy Products", "Olpers", "Full cream milk 1L — carton of 12", "Rs 2,760", "carton", 5, IMG.dairy, "Bulk",
+  wp("prod_dairy_olpers_milk", "Dairy Products", "Dairy", "Full cream milk 1L — carton of 12", "Rs 2,760", "carton", 5, IMG.dairy, "Bulk",
      [ { minQty: 5, priceLabel: "Rs 2,760" }, { minQty: 20, priceLabel: "Rs 2,700" }, { minQty: 50, priceLabel: "Rs 2,640" } ]),
-  wp("prod_dairy_nurpur_butter", "Dairy Products", "Nurpur", "Butter 200g — pack of 24", "Rs 6,480", "carton", 3, IMG.dairy),
-  wp("prod_dairy_adams_creamer", "Dairy Products", "Adams", "Tea whitener 400g — pack of 24", "Rs 5,760", "carton", 3, IMG.dairy, "New"),
+  wp("prod_dairy_nurpur_butter", "Dairy Products", "Dairy", "Butter 200g — pack of 24", "Rs 6,480", "carton", 3, IMG.dairy),
+  wp("prod_dairy_adams_creamer", "Dairy Products", "Dairy", "Powdered tea whitener 400g — pack of 24", "Rs 5,760", "carton", 3, IMG.dairy, "New"),
 
   // --- Confectionery ---
-  wp("prod_conf_candyland", "Confectionery", "Candyland", "Assorted toffees — 1kg jar", "Rs 780", "jar", 6, IMG.confection),
-  wp("prod_conf_bisconni", "Confectionery", "Bisconni", "Chocolate chip cookies — carton of 24", "Rs 3,600", "carton", 4, IMG.confection, "Deal",
+  wp("prod_conf_candyland", "Confectionery", "Confectionery", "Assorted toffees — 1kg jar", "Rs 780", "jar", 6, IMG.confection),
+  wp("prod_conf_bisconni", "Confectionery", "Confectionery", "Chocolate chip cookies — carton of 24", "Rs 3,600", "carton", 4, IMG.confection, "Deal",
      [ { minQty: 4, priceLabel: "Rs 3,600" }, { minQty: 12, priceLabel: "Rs 3,480" }, { minQty: 30, priceLabel: "Rs 3,360" } ]),
-  wp("prod_conf_mayfair", "Confectionery", "Mayfair", "Éclairs — 900g pouch", "Rs 690", "pouch", 6, IMG.confection),
+  wp("prod_conf_mayfair", "Confectionery", "Confectionery", "Chocolate éclairs — 900g pouch", "Rs 690", "pouch", 6, IMG.confection),
 
   // --- Soaps ---
-  wp("prod_soap_lifebuoy", "Soaps", "Lifebuoy", "Total soap 130g — carton of 48", "Rs 4,320", "carton", 3, IMG.soap, "Bulk",
+  wp("prod_soap_lifebuoy", "Soaps", "Soap", "Antibacterial bar soap 130g — carton of 48", "Rs 4,320", "carton", 3, IMG.soap, "Bulk",
      [ { minQty: 3, priceLabel: "Rs 4,320" }, { minQty: 10, priceLabel: "Rs 4,220" }, { minQty: 25, priceLabel: "Rs 4,100" } ]),
-  wp("prod_soap_safeguard", "Soaps", "Safeguard", "Pure white 135g — carton of 48", "Rs 5,040", "carton", 3, IMG.soap),
-  wp("prod_soap_lux", "Soaps", "Lux", "Soft touch 128g — carton of 48", "Rs 4,560", "carton", 3, IMG.soap),
+  wp("prod_soap_safeguard", "Soaps", "Soap", "White bar soap 135g — carton of 48", "Rs 5,040", "carton", 3, IMG.soap),
+  wp("prod_soap_lux", "Soaps", "Soap", "Moisturizing bar soap 128g — carton of 48", "Rs 4,560", "carton", 3, IMG.soap),
 
   // --- Shampoos ---
-  wp("prod_sham_sunsilk", "Shampoos", "Sunsilk", "Shampoo sachets 8ml — box of 72", "Rs 720", "box", 6, IMG.shampoo),
-  wp("prod_sham_headshoulders", "Shampoos", "Head & Shoulders", "Anti-dandruff 185ml — pack of 12", "Rs 5,880", "carton", 3, IMG.shampoo, "New"),
-  wp("prod_sham_clear", "Shampoos", "Clear", "Menthol 185ml — pack of 12", "Rs 5,520", "carton", 3, IMG.shampoo),
+  wp("prod_sham_sunsilk", "Shampoos", "Shampoo", "Shampoo sachets 8ml — box of 72", "Rs 720", "box", 6, IMG.shampoo),
+  wp("prod_sham_headshoulders", "Shampoos", "Shampoo", "Anti-dandruff shampoo 185ml — pack of 12", "Rs 5,880", "carton", 3, IMG.shampoo, "New"),
+  wp("prod_sham_clear", "Shampoos", "Shampoo", "Menthol shampoo 185ml — pack of 12", "Rs 5,520", "carton", 3, IMG.shampoo),
 
   // --- Sauces ---
-  wp("prod_sauce_shangrila", "Sauces", "Shangrila", "Tomato ketchup 800g — pack of 12", "Rs 3,360", "carton", 3, IMG.sauce),
-  wp("prod_sauce_national", "Sauces", "National", "Chilli garlic 775g — pack of 12", "Rs 3,600", "carton", 3, IMG.sauce, "Deal",
+  wp("prod_sauce_shangrila", "Sauces", "Sauce", "Tomato ketchup 800g — pack of 12", "Rs 3,360", "carton", 3, IMG.sauce),
+  wp("prod_sauce_national", "Sauces", "Sauce", "Chilli garlic sauce 775g — pack of 12", "Rs 3,600", "carton", 3, IMG.sauce, "Deal",
      [ { minQty: 3, priceLabel: "Rs 3,600" }, { minQty: 12, priceLabel: "Rs 3,480" }, { minQty: 30, priceLabel: "Rs 3,360" } ]),
-  wp("prod_sauce_mitchells", "Sauces", "Mitchell's", "Soya sauce 300ml — pack of 24", "Rs 4,080", "carton", 3, IMG.sauce),
+  wp("prod_sauce_mitchells", "Sauces", "Sauce", "Soya sauce 300ml — pack of 24", "Rs 4,080", "carton", 3, IMG.sauce),
 
   // --- Flour ---
-  wp("prod_flour_sunridge", "Flour", "Sunridge", "Chakki atta 10kg bag", "Rs 1,250", "bag", 10, IMG.flour, "Bulk",
+  wp("prod_flour_sunridge", "Flour", "Flour", "Wheat flour (atta) 10kg bag", "Rs 1,250", "bag", 10, IMG.flour, "Bulk",
      [ { minQty: 10, priceLabel: "Rs 1,250" }, { minQty: 30, priceLabel: "Rs 1,210" }, { minQty: 60, priceLabel: "Rs 1,180" } ]),
-  wp("prod_flour_bakeparlor", "Flour", "Bake Parlor", "Maida 5kg bag", "Rs 720", "bag", 10, IMG.flour),
+  wp("prod_flour_bakeparlor", "Flour", "Flour", "Refined flour (maida) 5kg bag", "Rs 720", "bag", 10, IMG.flour),
 
   // --- Sugar ---
-  wp("prod_sugar_alarabia", "Sugar", "Al-Arabia", "Refined sugar 50kg bori", "Rs 8,600", "bori", 3, IMG.sugar, "Bulk",
+  wp("prod_sugar_alarabia", "Sugar", "Sugar", "Refined white sugar 50kg bori", "Rs 8,600", "bori", 3, IMG.sugar, "Bulk",
      [ { minQty: 3, priceLabel: "Rs 8,600" }, { minQty: 10, priceLabel: "Rs 8,450" }, { minQty: 25, priceLabel: "Rs 8,300" } ]),
-  wp("prod_sugar_brown", "Sugar", "Golden", "Brown sugar 25kg bag", "Rs 5,200", "bag", 3, IMG.sugar),
+  wp("prod_sugar_brown", "Sugar", "Sugar", "Brown sugar 25kg bag", "Rs 5,200", "bag", 3, IMG.sugar),
 
   // --- Pulses ---
-  wp("prod_pulse_masoor", "Pulses", "Mitchell's", "Masoor daal 25kg bag", "Rs 6,750", "bag", 2, IMG.pulses),
-  wp("prod_pulse_chana", "Pulses", "Sunridge", "Chana daal 25kg bag", "Rs 7,000", "bag", 2, IMG.pulses, "Deal"),
+  wp("prod_pulse_masoor", "Pulses", "Pulses", "Red lentils (masoor) 25kg bag", "Rs 6,750", "bag", 2, IMG.pulses),
+  wp("prod_pulse_chana", "Pulses", "Pulses", "Split chickpeas (chana daal) 25kg bag", "Rs 7,000", "bag", 2, IMG.pulses, "Deal"),
 
   // --- Rice ---
-  wp("prod_rice_guard", "Rice", "Guard", "Super basmati 40kg bag", "Rs 12,800", "bag", 2, IMG.rice, "Bulk",
+  wp("prod_rice_guard", "Rice", "Rice", "Basmati rice 40kg bag", "Rs 12,800", "bag", 2, IMG.rice, "Bulk",
      [ { minQty: 2, priceLabel: "Rs 12,800" }, { minQty: 8, priceLabel: "Rs 12,500" }, { minQty: 20, priceLabel: "Rs 12,200" } ]),
-  wp("prod_rice_falak", "Rice", "Falak", "Sella basmati 40kg bag", "Rs 11,600", "bag", 2, IMG.rice),
+  wp("prod_rice_falak", "Rice", "Rice", "Sella basmati rice 40kg bag", "Rs 11,600", "bag", 2, IMG.rice),
 
   // --- Pasta ---
-  wp("prod_pasta_bakeparlor", "Pasta", "Bake Parlor", "Macaroni 400g — carton of 24", "Rs 2,640", "carton", 4, IMG.pasta),
-  wp("prod_pasta_italiano", "Pasta", "Italiano", "Spaghetti 500g — carton of 20", "Rs 3,000", "carton", 4, IMG.pasta, "New"),
+  wp("prod_pasta_bakeparlor", "Pasta", "Pasta", "Macaroni pasta 400g — carton of 24", "Rs 2,640", "carton", 4, IMG.pasta),
+  wp("prod_pasta_italiano", "Pasta", "Pasta", "Spaghetti pasta 500g — carton of 20", "Rs 3,000", "carton", 4, IMG.pasta, "New"),
 
   // --- Noodles ---
-  wp("prod_noodle_knorr", "Noodles", "Knorr", "Chicken noodles 66g — carton of 24", "Rs 1,680", "carton", 6, IMG.noodles, "Deal",
+  wp("prod_noodle_knorr", "Noodles", "Noodles", "Chicken instant noodles 66g — carton of 24", "Rs 1,680", "carton", 6, IMG.noodles, "Deal",
      [ { minQty: 6, priceLabel: "Rs 1,680" }, { minQty: 20, priceLabel: "Rs 1,620" }, { minQty: 50, priceLabel: "Rs 1,560" } ]),
-  wp("prod_noodle_maggi", "Noodles", "Maggi", "Masala noodles 68g — carton of 24", "Rs 1,720", "carton", 6, IMG.noodles),
-  wp("prod_noodle_shoop", "Noodles", "Shoop", "Chicken noodles 65g — carton of 24", "Rs 1,600", "carton", 6, IMG.noodles),
+  wp("prod_noodle_maggi", "Noodles", "Noodles", "Masala instant noodles 68g — carton of 24", "Rs 1,720", "carton", 6, IMG.noodles),
+  wp("prod_noodle_shoop", "Noodles", "Noodles", "Chicken instant noodles 65g — carton of 24", "Rs 1,600", "carton", 6, IMG.noodles),
 
   // --- Cooking Oil ---
-  wp("prod_oil_dalda", "Cooking Oil", "Dalda", "Cooking oil 5L — carton of 4", "Rs 6,800", "carton", 3, IMG.oil, "Bulk",
+  wp("prod_oil_dalda", "Cooking Oil", "Cooking Oil", "Cooking oil 5L — carton of 4", "Rs 6,800", "carton", 3, IMG.oil, "Bulk",
      [ { minQty: 3, priceLabel: "Rs 6,800" }, { minQty: 12, priceLabel: "Rs 6,650" }, { minQty: 30, priceLabel: "Rs 6,500" } ]),
-  wp("prod_oil_sufi", "Cooking Oil", "Sufi", "Cooking oil 5L — carton of 4", "Rs 6,600", "carton", 3, IMG.oil),
-  wp("prod_oil_habib", "Cooking Oil", "Habib", "Banaspati ghee 5kg — carton of 4", "Rs 7,200", "carton", 3, IMG.oil),
+  wp("prod_oil_sufi", "Cooking Oil", "Cooking Oil", "Vegetable cooking oil 5L — carton of 4", "Rs 6,600", "carton", 3, IMG.oil),
+  wp("prod_oil_habib", "Cooking Oil", "Cooking Oil", "Clarified butter (ghee) 5kg — carton of 4", "Rs 7,200", "carton", 3, IMG.oil),
 
   // --- Tea & Coffee ---
-  wp("prod_tea_tapal", "Tea & Coffee", "Tapal", "Danedar 900g — carton of 12", "Rs 10,200", "carton", 4, IMG.tea, "Bulk",
+  wp("prod_tea_tapal", "Tea & Coffee", "Tea", "Loose leaf black tea 900g — carton of 12", "Rs 10,200", "carton", 4, IMG.tea, "Bulk",
      [ { minQty: 4, priceLabel: "Rs 10,200" }, { minQty: 15, priceLabel: "Rs 9,900" }, { minQty: 40, priceLabel: "Rs 9,600" } ]),
-  wp("prod_tea_lipton", "Tea & Coffee", "Lipton", "Yellow label 950g — carton of 12", "Rs 10,800", "carton", 4, IMG.tea),
-  wp("prod_tea_nescafe", "Tea & Coffee", "Nescafé", "Classic 200g — pack of 12", "Rs 12,000", "carton", 2, IMG.tea, "New"),
+  wp("prod_tea_lipton", "Tea & Coffee", "Tea", "Black tea bags 950g — carton of 12", "Rs 10,800", "carton", 4, IMG.tea),
+  wp("prod_tea_nescafe", "Tea & Coffee", "Coffee", "Instant coffee 200g — pack of 12", "Rs 12,000", "carton", 2, IMG.tea, "New"),
 
   // --- Beverages ---
-  wp("prod_bev_pakola", "Beverages", "Pakola", "Ice cream soda 1.5L — pack of 6", "Rs 1,020", "pack", 6, IMG.beverage),
-  wp("prod_bev_gourmet", "Beverages", "Gourmet", "Cola 2.25L — pack of 6", "Rs 1,140", "pack", 6, IMG.beverage, "Deal"),
+  wp("prod_bev_pakola", "Beverages", "Beverages", "Cream soda 1.5L — pack of 6", "Rs 1,020", "pack", 6, IMG.beverage),
+  wp("prod_bev_gourmet", "Beverages", "Beverages", "Cola drink 2.25L — pack of 6", "Rs 1,140", "pack", 6, IMG.beverage, "Deal"),
 
   // --- Snacks ---
-  wp("prod_snack_lays", "Snacks", "Lay's", "Masala chips 32g — carton of 60", "Rs 3,000", "carton", 4, IMG.snack, "Deal",
+  wp("prod_snack_lays", "Snacks", "Snacks", "Masala potato chips 32g — carton of 60", "Rs 3,000", "carton", 4, IMG.snack, "Deal",
      [ { minQty: 4, priceLabel: "Rs 3,000" }, { minQty: 12, priceLabel: "Rs 2,880" }, { minQty: 30, priceLabel: "Rs 2,760" } ]),
-  wp("prod_snack_kurkure", "Snacks", "Kurkure", "Chutney chaska 38g — carton of 60", "Rs 2,880", "carton", 4, IMG.snack),
-  wp("prod_snack_supercrisp", "Snacks", "Super Crisp", "Slanty 28g — carton of 60", "Rs 2,700", "carton", 4, IMG.snack),
+  wp("prod_snack_kurkure", "Snacks", "Snacks", "Spicy corn snacks 38g — carton of 60", "Rs 2,880", "carton", 4, IMG.snack),
+  wp("prod_snack_supercrisp", "Snacks", "Snacks", "Crispy snack sticks 28g — carton of 60", "Rs 2,700", "carton", 4, IMG.snack),
 
   // --- Spices ---
-  wp("prod_spice_national", "Spices", "National", "Chaat masala 800g — pack of 12", "Rs 4,560", "carton", 2, IMG.spice),
-  wp("prod_spice_shan", "Spices", "Shan", "Biryani masala 50g — box of 144", "Rs 8,640", "box", 1, IMG.spice, "Bulk"),
-  wp("prod_spice_mehran", "Spices", "Mehran", "Turmeric powder 400g — pack of 24", "Rs 3,840", "carton", 2, IMG.spice),
+  wp("prod_spice_national", "Spices", "Spices", "Chaat masala 800g — pack of 12", "Rs 4,560", "carton", 2, IMG.spice),
+  wp("prod_spice_shan", "Spices", "Spices", "Biryani spice mix 50g — box of 144", "Rs 8,640", "box", 1, IMG.spice, "Bulk"),
+  wp("prod_spice_mehran", "Spices", "Spices", "Turmeric powder 400g — pack of 24", "Rs 3,840", "carton", 2, IMG.spice),
 
   // --- Cleaning ---
-  wp("prod_clean_surf", "Cleaning", "Surf Excel", "Washing powder 1kg — carton of 9", "Rs 4,050", "carton", 3, IMG.cleaning, "Bulk",
+  wp("prod_clean_surf", "Cleaning", "Cleaning", "Washing powder 1kg — carton of 9", "Rs 4,050", "carton", 3, IMG.cleaning, "Bulk",
      [ { minQty: 3, priceLabel: "Rs 4,050" }, { minQty: 12, priceLabel: "Rs 3,960" }, { minQty: 30, priceLabel: "Rs 3,870" } ]),
-  wp("prod_clean_bonus", "Cleaning", "Bonus", "Detergent 1kg — carton of 9", "Rs 2,880", "carton", 3, IMG.cleaning),
-  wp("prod_clean_vim", "Cleaning", "Vim", "Dishwash bar 200g — carton of 48", "Rs 3,840", "carton", 3, IMG.cleaning),
+  wp("prod_clean_bonus", "Cleaning", "Cleaning", "Laundry detergent 1kg — carton of 9", "Rs 2,880", "carton", 3, IMG.cleaning),
+  wp("prod_clean_vim", "Cleaning", "Cleaning", "Dishwashing bar 200g — carton of 48", "Rs 3,840", "carton", 3, IMG.cleaning),
 ];
 
 const shops = [

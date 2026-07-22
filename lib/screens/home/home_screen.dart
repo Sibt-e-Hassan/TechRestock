@@ -124,6 +124,17 @@ class _HomeScreenState extends State<HomeScreen> {
                                       fontWeight: FontWeight.w800,
                                     ),
                                   ),
+                                  const SizedBox(height: 2),
+                                  Text(
+                                    'Wholesale catalogue · bulk pricing',
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: GoogleFonts.ibmPlexSans(
+                                      color: Colors.white.withValues(alpha: 0.55),
+                                      fontSize: 11.5,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
@@ -139,6 +150,13 @@ class _HomeScreenState extends State<HomeScreen> {
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(10),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withValues(alpha: 0.12),
+                                  blurRadius: 8,
+                                  offset: const Offset(0, 2),
+                                ),
+                              ],
                             ),
                             child: Row(
                               children: [

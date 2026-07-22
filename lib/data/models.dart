@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:shop_pandaa/data/catalog_display.dart';
 
 /// A wholesale price break: buy [minQty] or more of a unit and pay
 /// [priceLabel] per unit. Powers ThokBazaar's bulk-pricing table.
@@ -68,21 +69,23 @@ class ProductItem {
             .map((t) => PriceTier.fromMap(Map<String, dynamic>.from(t)))
             .toList()
         : <PriceTier>[];
-    return ProductItem(
-      id: id,
-      title: (map['title'] ?? '') as String,
-      shopName: (map['shopName'] ?? '') as String,
-      priceLabel: (map['priceLabel'] ?? '') as String,
-      badge: map['badge'] as String?,
-      country: map['country'] as String?,
-      city: map['city'] as String?,
-      shopId: map['shopId'] as String?,
-      imageUrl: map['imageUrl'] as String?,
-      unit: map['unit'] as String?,
-      minOrderQty: (map['minOrderQty'] as num?)?.toInt() ?? 1,
-      priceTiers: tiers,
-      brand: map['brand'] as String?,
-      category: map['category'] as String?,
+    return CatalogDisplay.applyOverrides(
+      ProductItem(
+        id: id,
+        title: (map['title'] ?? '') as String,
+        shopName: (map['shopName'] ?? '') as String,
+        priceLabel: (map['priceLabel'] ?? '') as String,
+        badge: map['badge'] as String?,
+        country: map['country'] as String?,
+        city: map['city'] as String?,
+        shopId: map['shopId'] as String?,
+        imageUrl: map['imageUrl'] as String?,
+        unit: map['unit'] as String?,
+        minOrderQty: (map['minOrderQty'] as num?)?.toInt() ?? 1,
+        priceTiers: tiers,
+        brand: map['brand'] as String?,
+        category: map['category'] as String?,
+      ),
     );
   }
 
