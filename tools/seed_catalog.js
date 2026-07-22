@@ -144,7 +144,7 @@ const products = [
   wp("prod_tea_nescafe", "Tea & Coffee", "Coffee", "Instant coffee 200g — pack of 12", "Rs 12,000", "carton", 2, IMG.tea, "New"),
 
   // --- Beverages ---
-  wp("prod_bev_pakola", "Beverages", "Beverages", "Cream soda 1.5L — pack of 6", "Rs 1,020", "pack", 6, IMG.beverage),
+  // Cream soda removed — no accurate free product photo available.
   wp("prod_bev_gourmet", "Beverages", "Beverages", "Cola drink 2.25L — pack of 6", "Rs 1,140", "pack", 6, IMG.beverage, "Deal"),
 
   // --- Snacks ---
