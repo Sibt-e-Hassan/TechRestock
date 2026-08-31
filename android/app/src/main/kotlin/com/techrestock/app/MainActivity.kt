@@ -1,4 +1,4 @@
-package com.thokbazaar.app
+package com.techrestock.app
 
 import io.flutter.embedding.android.FlutterActivity
 

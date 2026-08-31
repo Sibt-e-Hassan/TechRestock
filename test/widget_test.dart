@@ -3,7 +3,7 @@ import 'package:firebase_core_platform_interface/firebase_core_platform_interfac
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
-import 'package:shop_pandaa/app.dart';
+import 'package:tech_restock/app.dart';
 
 class MockFirebaseAppPlatform extends FirebaseAppPlatform {
   MockFirebaseAppPlatform(super.name, super.options);
@@ -68,12 +68,12 @@ void main() {
     await Firebase.initializeApp();
   });
 
-  testWidgets('Sign in screen loads', (WidgetTester tester) async {
+  testWidgets('Log in screen loads', (WidgetTester tester) async {
     await tester.pumpWidget(const ShoppandaApp());
     await tester.pumpAndSettle();
 
-    // Verify Sign In controls are displayed
-    expect(find.text('Sign in'), findsWidgets);
-    expect(find.text('ThokBazaar'), findsOneWidget);
+    // Verify Log In controls are displayed
+    expect(find.text('Log in'), findsWidgets);
+    expect(find.text('Email'), findsOneWidget);
   });
 }

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:shop_pandaa/config/legal_urls.dart';
-import 'package:shop_pandaa/theme/app_theme.dart';
-import 'package:shop_pandaa/utils/url_opener.dart';
-import 'package:shop_pandaa/widgets/account_deletion_sheet.dart';
-import 'package:shop_pandaa/widgets/app_card.dart';
-import 'package:shop_pandaa/widgets/gradient_scaffold.dart';
-import 'package:shop_pandaa/widgets/primary_button.dart';
-import 'package:shop_pandaa/widgets/section_head.dart';
+import 'package:tech_restock/config/legal_urls.dart';
+import 'package:tech_restock/theme/app_theme.dart';
+import 'package:tech_restock/utils/url_opener.dart';
+import 'package:tech_restock/widgets/account_deletion_sheet.dart';
+import 'package:tech_restock/widgets/app_card.dart';
+import 'package:tech_restock/widgets/gradient_scaffold.dart';
+import 'package:tech_restock/widgets/primary_button.dart';
+import 'package:tech_restock/widgets/section_head.dart';
 
 class LegalCenterScreen extends StatelessWidget {
   const LegalCenterScreen({super.key});
@@ -56,7 +56,7 @@ class LegalCenterScreen extends StatelessWidget {
                 Text('Terms of Service', style: Theme.of(context).textTheme.titleMedium),
                 const SizedBox(height: 8),
                 Text(
-                  'Rules for using ThokBazaar as a discovery and inquiry app, including account creation and agreement to these terms and the Privacy Policy. Opens full terms in your browser.',
+                  'Rules for using TechRestock as a discovery and inquiry app, including account creation and agreement to these terms and the Privacy Policy. Opens full terms in your browser.',
                   style: Theme.of(context).textTheme.bodyMedium,
                 ),
                 const SizedBox(height: 16),

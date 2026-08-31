@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:shop_pandaa/data/media_urls.dart';
-import 'package:shop_pandaa/data/models.dart';
-import 'package:shop_pandaa/services/khata_service.dart';
-import 'package:shop_pandaa/theme/app_colors.dart';
-import 'package:shop_pandaa/theme/app_theme.dart';
-import 'package:shop_pandaa/widgets/gradient_scaffold.dart';
-import 'package:shop_pandaa/widgets/primary_button.dart';
-import 'package:shop_pandaa/widgets/product_network_image.dart';
+import 'package:tech_restock/data/media_urls.dart';
+import 'package:tech_restock/data/models.dart';
+import 'package:tech_restock/services/khata_service.dart';
+import 'package:tech_restock/theme/app_colors.dart';
+import 'package:tech_restock/theme/app_theme.dart';
+import 'package:tech_restock/widgets/gradient_scaffold.dart';
+import 'package:tech_restock/widgets/primary_button.dart';
+import 'package:tech_restock/widgets/product_network_image.dart';
 
 /// Per-supplier khata: the running ledger of purchases (udhaar taken) and
 /// payments made, with the outstanding balance at the top.

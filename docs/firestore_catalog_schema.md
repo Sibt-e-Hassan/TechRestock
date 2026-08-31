@@ -10,7 +10,7 @@ Use these collections in Firebase Console. The app reads them dynamically; no co
 | `location` | string | yes | e.g. `Karachi, Pakistan` |
 | `shopCount` | number | yes | Shown on home card |
 | `country` | string | yes | Used for country filter |
-| `imageUrl` | string | legacy | Optional; ThokBazaar resolves images in-app via `lib/data/media_urls.dart` |
+| `imageUrl` | string | legacy | Optional; TechRestock resolves images in-app via `lib/data/media_urls.dart` |
 | `title` | string | optional | Legacy; `name` is primary |
 | `shopName` | string | optional | Legacy subtitle |
 | `badge` | string | optional | e.g. `Trending` |

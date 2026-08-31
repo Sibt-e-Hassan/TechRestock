@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:shop_pandaa/config/legal_urls.dart';
-import 'package:shop_pandaa/theme/app_colors.dart';
-import 'package:shop_pandaa/theme/app_theme.dart';
-import 'package:shop_pandaa/utils/url_opener.dart';
-import 'package:shop_pandaa/widgets/legal_link.dart';
-import 'package:shop_pandaa/widgets/primary_button.dart';
+import 'package:tech_restock/config/legal_urls.dart';
+import 'package:tech_restock/theme/app_colors.dart';
+import 'package:tech_restock/theme/app_theme.dart';
+import 'package:tech_restock/utils/url_opener.dart';
+import 'package:tech_restock/widgets/legal_link.dart';
+import 'package:tech_restock/widgets/primary_button.dart';
 
 class DividerOr extends StatelessWidget {
   const DividerOr({super.key});

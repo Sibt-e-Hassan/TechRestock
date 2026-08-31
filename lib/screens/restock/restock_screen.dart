@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:shop_pandaa/data/models.dart';
-import 'package:shop_pandaa/services/restock_service.dart';
-import 'package:shop_pandaa/theme/app_colors.dart';
-import 'package:shop_pandaa/theme/app_theme.dart';
-import 'package:shop_pandaa/widgets/gradient_scaffold.dart';
+import 'package:tech_restock/data/models.dart';
+import 'package:tech_restock/services/restock_service.dart';
+import 'package:tech_restock/theme/app_colors.dart';
+import 'package:tech_restock/theme/app_theme.dart';
+import 'package:tech_restock/widgets/gradient_scaffold.dart';
 
 /// Manage scheduled restock reminders — the "never run out of stock" tool for
 /// shopkeepers. Reminders are added from a product's detail screen.

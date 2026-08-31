@@ -1,14 +1,14 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:shop_pandaa/app.dart';
-import 'package:shop_pandaa/data/models.dart';
-import 'package:shop_pandaa/theme/app_colors.dart';
-import 'package:shop_pandaa/theme/app_theme.dart';
-import 'package:shop_pandaa/widgets/brand_logo.dart';
-import 'package:shop_pandaa/widgets/product_card.dart';
+import 'package:tech_restock/app.dart';
+import 'package:tech_restock/data/models.dart';
+import 'package:tech_restock/theme/app_colors.dart';
+import 'package:tech_restock/theme/app_theme.dart';
+import 'package:tech_restock/widgets/brand_logo.dart';
+import 'package:tech_restock/widgets/product_card.dart';
 
-/// Offers tab — bulk deals and badged products across the ThokBazaar catalog.
+/// Offers tab — bulk deals and badged products across the TechRestock catalog.
 /// A product is an "offer" when it carries a `badge` (e.g. "Bulk", "Deal").
 class OffersScreen extends StatelessWidget {
   const OffersScreen({super.key});

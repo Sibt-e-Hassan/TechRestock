@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:shop_pandaa/data/models.dart';
+import 'package:tech_restock/data/models.dart';
 
 /// Device-local store for scheduled restock reminders. Singleton +
 /// ChangeNotifier so product detail, the reminders screen, and the profile
@@ -12,7 +12,7 @@ class RestockService extends ChangeNotifier {
   RestockService._();
   static final RestockService instance = RestockService._();
 
-  static const _prefsKey = 'thokbazaar_restock_v1';
+  static const _prefsKey = 'techrestock_restock_v1';
 
   List<RestockReminder> _reminders = const [];
   bool _loaded = false;

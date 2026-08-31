@@ -1,5 +1,14 @@
 {
   "projects": {
-    "default": "thokbazaar-4a79a"
+    "default": "shop-panda-d6377"
+  },
+  "targets": {
+    "shop-panda-d6377": {
+      "hosting": {
+        "techrestock": [
+          "techrestock-app"
+        ]
+      }
+    }
   }
 }

@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:shop_pandaa/data/media_urls.dart';
-import 'package:shop_pandaa/data/models.dart';
+import 'package:tech_restock/data/media_urls.dart';
+import 'package:tech_restock/data/models.dart';
 
 /// Device-local store for the shopkeeper's khata (running supplier credit).
 /// Persisted in shared_preferences — a khata is private bookkeeping, so it
@@ -14,9 +14,9 @@ class KhataService extends ChangeNotifier {
   KhataService._();
   static final KhataService instance = KhataService._();
 
-  static const _prefsKey = 'thokbazaar_khata_v1';
-  static const _seededKey = 'thokbazaar_khata_seeded_v1';
-  static const _dataVersionKey = 'thokbazaar_khata_data_version';
+  static const _prefsKey = 'techrestock_khata_v1';
+  static const _seededKey = 'techrestock_khata_seeded_v1';
+  static const _dataVersionKey = 'techrestock_khata_data_version';
   static const _currentDataVersion = 2;
 
   List<KhataSupplier> _suppliers = const [];

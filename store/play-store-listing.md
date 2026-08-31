@@ -1,31 +1,21 @@
-# ThokBazaar — Google Play Store Listing
+# TechRestock — Google Play Store Listing
 
 ## App details
-- **App name:** ThokBazaar
-- **Package name:** `com.thokbazaar.app`
-- **Category:** Shopping (Business)
-- **Privacy Policy:** https://thokbazaar-4a79a.web.app/privacy
-- **Terms of Service:** https://thokbazaar-4a79a.web.app/terms
-- **Account & Data Deletion:** https://thokbazaar-4a79a.web.app/delete
-- **Support email:** raspharmaceutical51@gmail.com
-
-> ⚠️ The legal URLs above assume you deploy `web_docs/` to the ThokBazaar
-> Firebase Hosting project (`firebase deploy --only hosting`). Until then they
-> 404 — deploy them (and update `lib/config/legal_urls.dart`) before submitting.
-
-## Graphic assets
-- **App icon (512×512, 32-bit PNG):** `store/icon_512.png`
-- **Feature graphic (1024×500, no alpha):** `store/feature_graphic.png`
-- Phone screenshots: add 2–8 exported from your device (Home, Product detail with bulk tiers, Khata, Order accepted, Offers work well).
+- **App name:** TechRestock
+- **Package name:** `com.techrestock.app`
+- **Category:** Business / Shopping
+- **Privacy Policy:** https://techrestock-app.web.app/privacy
+- **Terms of Service:** https://techrestock-app.web.app/terms
+- **Account & Data Deletion:** https://techrestock-app.web.app/delete
+- **Support email:** shankhaan0001@gmail.com
 
 ---
 
 ## Short description (80 characters max)
-See `store/short_description.txt`:
 ```
-Wholesale ordering for shopkeepers — bulk rates, supplier khata & restock.
+Wholesale mobile accessories & tech supplies — bulk pricing & inventory restock.
 ```
-*(74 characters)*
+*(79 characters)*
 
 ---
 

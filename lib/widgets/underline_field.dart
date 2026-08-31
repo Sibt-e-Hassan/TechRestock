@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shop_pandaa/theme/app_colors.dart';
+import 'package:tech_restock/theme/app_colors.dart';
 
 /// Minimal underlined text field used on the auth screens: a small label above
 /// a single underline (no box), with an optional password eye-toggle and an
@@ -96,7 +96,7 @@ class _UnderlineFieldState extends State<UnderlineField> {
 }
 
 /// Pill-shaped primary button for the auth screens (matches the reference's
-/// rounded CTA), in ThokBazaar's navy gradient.
+/// rounded CTA), in TechRestock's navy gradient.
 class AuthButton extends StatelessWidget {
   const AuthButton({
     super.key,

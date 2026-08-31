@@ -2,19 +2,19 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:shop_pandaa/app.dart';
-import 'package:shop_pandaa/utils/auth_messages.dart';
-import 'package:shop_pandaa/utils/user_greeting.dart';
-import 'package:shop_pandaa/widgets/account_deletion_sheet.dart';
-import 'package:shop_pandaa/screens/account/legal_center_screen.dart';
-import 'package:shop_pandaa/screens/account/info_screen.dart';
-import 'package:shop_pandaa/screens/orders/orders_screen.dart';
-import 'package:shop_pandaa/screens/restock/restock_screen.dart';
-import 'package:shop_pandaa/theme/app_colors.dart';
-import 'package:shop_pandaa/theme/app_theme.dart';
-import 'package:shop_pandaa/widgets/app_modal.dart';
-import 'package:shop_pandaa/widgets/outlined_field.dart';
-import 'package:shop_pandaa/widgets/primary_button.dart';
+import 'package:tech_restock/app.dart';
+import 'package:tech_restock/utils/auth_messages.dart';
+import 'package:tech_restock/utils/user_greeting.dart';
+import 'package:tech_restock/widgets/account_deletion_sheet.dart';
+import 'package:tech_restock/screens/account/legal_center_screen.dart';
+import 'package:tech_restock/screens/account/info_screen.dart';
+import 'package:tech_restock/screens/orders/orders_screen.dart';
+import 'package:tech_restock/screens/restock/restock_screen.dart';
+import 'package:tech_restock/theme/app_colors.dart';
+import 'package:tech_restock/theme/app_theme.dart';
+import 'package:tech_restock/widgets/app_modal.dart';
+import 'package:tech_restock/widgets/outlined_field.dart';
+import 'package:tech_restock/widgets/primary_button.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key, this.openLegalOnMount = false});
@@ -494,7 +494,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 const SizedBox(height: 16),
                 Center(
                   child: Text(
-                    'ThokBazaar · v2.0.5',
+                    'TechRestock · v2.0.5',
                     style: Theme.of(context).textTheme.bodySmall?.copyWith(
                           color: AppColors.textLight,
                         ),

@@ -50,23 +50,23 @@ class DefaultFirebaseOptions {
     apiKey: 'AIzaSyCxHcMlziG_PIIIxQ0b8A3SiJIb_HIM5vU',
     appId: '1:395999364947:android:39ef58eb70e27b6a5583a6',
     messagingSenderId: '395999364947',
-    projectId: 'thokbazaar-4a79a',
-    storageBucket: 'thokbazaar-4a79a.firebasestorage.app',
+    projectId: 'techrestock-b2b',
+    storageBucket: 'techrestock-b2b.firebasestorage.app',
   );
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyAUP8kOGzrACTG5pMLTHhx4dxEEhIrcSlg',
     appId: '1:395999364947:ios:48e659f9e2a466255583a6',
     messagingSenderId: '395999364947',
-    projectId: 'thokbazaar-4a79a',
-    storageBucket: 'thokbazaar-4a79a.firebasestorage.app',
-    iosBundleId: 'com.thokbazaar.app',
+    projectId: 'techrestock-b2b',
+    storageBucket: 'techrestock-b2b.firebasestorage.app',
+    iosBundleId: 'com.techrestock.app',
   );
   static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyAPBF_TufuqTp4lTCJJeYPGtJs54cDKP30',
     appId: '1:395999364947:web:1177c9d7eb686f3a5583a6',
     messagingSenderId: '395999364947',
-    projectId: 'thokbazaar-4a79a',
-    authDomain: 'thokbazaar-4a79a.firebaseapp.com',
-    storageBucket: 'thokbazaar-4a79a.firebasestorage.app',
+    projectId: 'techrestock-b2b',
+    authDomain: 'techrestock-b2b.firebaseapp.com',
+    storageBucket: 'techrestock-b2b.firebasestorage.app',
   );
 }

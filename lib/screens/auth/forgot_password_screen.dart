@@ -1,13 +1,13 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:shop_pandaa/theme/app_colors.dart';
-import 'package:shop_pandaa/utils/auth_messages.dart';
-import 'package:shop_pandaa/theme/app_theme.dart';
-import 'package:shop_pandaa/widgets/app_card.dart';
-import 'package:shop_pandaa/widgets/brand_header.dart';
-import 'package:shop_pandaa/widgets/gradient_scaffold.dart';
-import 'package:shop_pandaa/widgets/outlined_field.dart';
-import 'package:shop_pandaa/widgets/primary_button.dart';
+import 'package:tech_restock/theme/app_colors.dart';
+import 'package:tech_restock/utils/auth_messages.dart';
+import 'package:tech_restock/theme/app_theme.dart';
+import 'package:tech_restock/widgets/app_card.dart';
+import 'package:tech_restock/widgets/brand_header.dart';
+import 'package:tech_restock/widgets/gradient_scaffold.dart';
+import 'package:tech_restock/widgets/outlined_field.dart';
+import 'package:tech_restock/widgets/primary_button.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
   const ForgotPasswordScreen({super.key, this.initialEmail = ''});

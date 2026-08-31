@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:shop_pandaa/config/legal_urls.dart';
-import 'package:shop_pandaa/theme/app_colors.dart';
-import 'package:shop_pandaa/theme/app_theme.dart';
-import 'package:shop_pandaa/utils/url_opener.dart';
-import 'package:shop_pandaa/widgets/primary_button.dart';
+import 'package:tech_restock/config/legal_urls.dart';
+import 'package:tech_restock/theme/app_colors.dart';
+import 'package:tech_restock/theme/app_theme.dart';
+import 'package:tech_restock/utils/url_opener.dart';
+import 'package:tech_restock/widgets/primary_button.dart';
 
 /// Bottom sheet with in-app and email options for account deletion.
 Future<void> showAccountDeletionSheet(BuildContext context) {
@@ -30,7 +30,7 @@ Future<void> showAccountDeletionSheet(BuildContext context) {
             Text('Delete your account', style: Theme.of(sheetContext).textTheme.titleMedium),
             const SizedBox(height: 12),
             Text(
-              'You can permanently delete your ThokBazaar account from the app:',
+              'You can permanently delete your TechRestock account from the app:',
               style: Theme.of(sheetContext).textTheme.bodyMedium,
             ),
             const SizedBox(height: 12),
@@ -60,7 +60,7 @@ Future<void> showAccountDeletionSheet(BuildContext context) {
                 Navigator.of(sheetContext).pop();
                 openSupportEmail(
                   context,
-                  subject: 'ThokBazaar account deletion request',
+                  subject: 'TechRestock account deletion request',
                 );
               },
             ),

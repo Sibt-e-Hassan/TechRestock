@@ -1,15 +1,15 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:shop_pandaa/data/media_urls.dart';
-import 'package:shop_pandaa/data/models.dart';
-import 'package:shop_pandaa/theme/app_colors.dart';
-import 'package:shop_pandaa/theme/app_theme.dart';
-import 'package:shop_pandaa/widgets/app_card.dart';
-import 'package:shop_pandaa/widgets/cart_scope.dart';
-import 'package:shop_pandaa/widgets/gradient_scaffold.dart';
-import 'package:shop_pandaa/widgets/primary_button.dart';
-import 'package:shop_pandaa/widgets/product_network_image.dart';
-import 'package:shop_pandaa/widgets/restock_reminder_sheet.dart';
+import 'package:tech_restock/data/media_urls.dart';
+import 'package:tech_restock/data/models.dart';
+import 'package:tech_restock/theme/app_colors.dart';
+import 'package:tech_restock/theme/app_theme.dart';
+import 'package:tech_restock/widgets/app_card.dart';
+import 'package:tech_restock/widgets/cart_scope.dart';
+import 'package:tech_restock/widgets/gradient_scaffold.dart';
+import 'package:tech_restock/widgets/primary_button.dart';
+import 'package:tech_restock/widgets/product_network_image.dart';
+import 'package:tech_restock/widgets/restock_reminder_sheet.dart';
 
 class ProductDetailScreen extends StatelessWidget {
   const ProductDetailScreen({super.key, required this.productId});

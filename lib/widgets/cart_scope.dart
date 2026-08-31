@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:shop_pandaa/services/cart_service.dart';
+import 'package:tech_restock/services/cart_service.dart';
 
 class CartScope extends StatefulWidget {
   const CartScope({super.key, required this.child});

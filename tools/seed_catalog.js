@@ -38,7 +38,7 @@ const markets = [
   { id: "market_in_chandni", name: "Chandni Chowk", title: "Chandni Chowk", shopName: "Old Delhi Textile Lane", location: "New Delhi, India", shopCount: 210, country: "India", city: "New Delhi", badge: "Trending", imageUrl: "https://images.unsplash.com/photo-1587970551846-0311a2e0f3e0?w=800&q=80" },
 ];
 
-// ThokBazaar B2B catalog — wholesale FMCG stock a dukaan reorders. Each
+// TechRestock B2B catalog — wholesale FMCG stock a dukaan reorders. Each
 // product carries `category` (must match lib/data/categories.dart), `brand`,
 // `unit`, `minOrderQty`, optional `priceTiers` (bulk breaks), and an optional
 // `badge` (shows in the Offers tab). `shopName` mirrors `brand` for the legacy
@@ -233,24 +233,24 @@ const shops = [
   { id: "shop_in_old_delhi_snacks", name: "Old Delhi Snacks", category: "Food & Spices", marketId: "market_in_chandni", imageUrl: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80", tags: ["restaurant", "cafe", "snacks", "food"] },
 ];
 
-// Guard: this seeder must only ever write to the ThokBazaar project. If the
+// Guard: this seeder must only ever write to the TechRestock project. If the
 // service-account.json belongs to a different project, refuse — this prevents
 // accidentally polluting another app's Firestore (e.g. Bazaar Connect).
-const EXPECTED_PROJECT = "thokbazaar-4a79a";
+const EXPECTED_PROJECT = "techrestock-b2b";
 
 async function main() {
   if (serviceAccount.project_id !== EXPECTED_PROJECT) {
     console.error(
       `Refusing to seed: service-account.json is for project '${serviceAccount.project_id}', ` +
       `but this seeder only targets '${EXPECTED_PROJECT}'. ` +
-      `Generate a service account key from the ThokBazaar Firebase project and try again.`
+      `Generate a service account key from the TechRestock Firebase project and try again.`
     );
     process.exit(1);
   }
 
   const batch = db.batch();
 
-  // ThokBazaar is a flat B2B catalog — products only (no markets/shops).
+  // TechRestock is a flat B2B catalog — products only (no markets/shops).
   for (const p of products) {
     const { id, badge, priceTiers, ...rest } = p;
     const data = { ...rest, updatedAt: now };

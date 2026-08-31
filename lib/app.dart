@@ -1,17 +1,17 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:shop_pandaa/screens/auth/create_account_screen.dart';
-import 'package:shop_pandaa/screens/auth/forgot_password_screen.dart';
-import 'package:shop_pandaa/screens/auth/sign_in_screen.dart';
-import 'package:shop_pandaa/screens/cart/cart_screen.dart';
-import 'package:shop_pandaa/screens/market/market_detail_screen.dart';
-import 'package:shop_pandaa/screens/shop/shop_detail_screen.dart';
-import 'package:shop_pandaa/screens/orders/orders_screen.dart';
-import 'package:shop_pandaa/screens/product/product_detail_screen.dart';
-import 'package:shop_pandaa/screens/shell/main_shell.dart';
-import 'package:shop_pandaa/theme/app_theme.dart';
-import 'package:shop_pandaa/widgets/auth_gate.dart';
-import 'package:shop_pandaa/widgets/cart_scope.dart';
+import 'package:tech_restock/screens/auth/create_account_screen.dart';
+import 'package:tech_restock/screens/auth/forgot_password_screen.dart';
+import 'package:tech_restock/screens/auth/sign_in_screen.dart';
+import 'package:tech_restock/screens/cart/cart_screen.dart';
+import 'package:tech_restock/screens/market/market_detail_screen.dart';
+import 'package:tech_restock/screens/shop/shop_detail_screen.dart';
+import 'package:tech_restock/screens/orders/orders_screen.dart';
+import 'package:tech_restock/screens/product/product_detail_screen.dart';
+import 'package:tech_restock/screens/shell/main_shell.dart';
+import 'package:tech_restock/theme/app_theme.dart';
+import 'package:tech_restock/widgets/auth_gate.dart';
+import 'package:tech_restock/widgets/cart_scope.dart';
 
 class ShoppandaApp extends StatelessWidget {
   const ShoppandaApp({super.key});
@@ -30,7 +30,7 @@ class ShoppandaApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return CartScope(
       child: MaterialApp(
-      title: 'ThokBazaar',
+      title: 'TechRestock',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
       home: const AuthGate(),

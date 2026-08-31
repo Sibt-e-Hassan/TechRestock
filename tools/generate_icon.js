@@ -3,7 +3,7 @@
  * (gradient + connection-node mark). Run: node generate_icon.js
  * Outputs into ../assets/images/. Then run flutter_launcher_icons + native_splash.
  *
- * NOTE: ThokBazaar uses the box+arrow mark instead — run make_icons_from_source.js.
+ * NOTE: TechRestock uses the box+arrow mark instead — run make_icons_from_source.js.
  */
 const sharp = require("sharp");
 const path = require("path");

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:shop_pandaa/app.dart';
-import 'package:shop_pandaa/screens/account/profile_screen.dart';
-import 'package:shop_pandaa/screens/home/home_screen.dart';
-import 'package:shop_pandaa/screens/offers/offers_screen.dart';
-import 'package:shop_pandaa/screens/orders/orders_screen.dart';
-import 'package:shop_pandaa/screens/search/search_screen.dart';
-import 'package:shop_pandaa/widgets/app_bottom_nav.dart';
-import 'package:shop_pandaa/widgets/gradient_scaffold.dart';
+import 'package:tech_restock/app.dart';
+import 'package:tech_restock/screens/account/profile_screen.dart';
+import 'package:tech_restock/screens/home/home_screen.dart';
+import 'package:tech_restock/screens/offers/offers_screen.dart';
+import 'package:tech_restock/screens/orders/orders_screen.dart';
+import 'package:tech_restock/screens/search/search_screen.dart';
+import 'package:tech_restock/widgets/app_bottom_nav.dart';
+import 'package:tech_restock/widgets/gradient_scaffold.dart';
 
 class MainShell extends StatefulWidget {
   const MainShell({super.key});

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shop_pandaa/theme/app_theme.dart';
-import 'package:shop_pandaa/widgets/brand_logo.dart';
+import 'package:tech_restock/theme/app_theme.dart';
+import 'package:tech_restock/widgets/brand_logo.dart';
 
 class BrandHeaderCenter extends StatelessWidget {
   const BrandHeaderCenter({
@@ -18,7 +18,7 @@ class BrandHeaderCenter extends StatelessWidget {
       children: [
         BrandLogo(size: logoSize),
         const SizedBox(height: 16),
-        Text('ThokBazaar', style: AppTheme.brandSerif),
+        Text('TechRestock', style: AppTheme.brandSerif),
         const SizedBox(height: 6),
         Text(
           subtitle,
@@ -54,7 +54,7 @@ class BrandHeaderInline extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'ThokBazaar',
+                'TechRestock',
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: AppTheme.brandSerif.copyWith(

@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
-import 'package:shop_pandaa/data/models.dart';
+import 'package:tech_restock/data/models.dart';
 
 /// Manages `users/{uid}/cart` and submits inquiries to the `orders` collection.
 class CartService extends ChangeNotifier {

@@ -1,8 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:shop_pandaa/app.dart';
-import 'package:shop_pandaa/services/khata_service.dart';
-import 'package:shop_pandaa/services/restock_service.dart';
+import 'package:tech_restock/app.dart';
+import 'package:tech_restock/services/khata_service.dart';
+import 'package:tech_restock/services/restock_service.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {

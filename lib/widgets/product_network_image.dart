@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:shop_pandaa/theme/app_colors.dart';
+import 'package:tech_restock/theme/app_colors.dart';
 
 /// Loads a remote catalog or supplier image with loading and error states.
 /// URLs are resolved via [MediaUrls] in the app — not Firebase Storage.

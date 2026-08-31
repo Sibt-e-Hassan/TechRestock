@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:shop_pandaa/services/restock_service.dart';
-import 'package:shop_pandaa/theme/app_colors.dart';
-import 'package:shop_pandaa/theme/app_theme.dart';
-import 'package:shop_pandaa/widgets/primary_button.dart';
+import 'package:tech_restock/services/restock_service.dart';
+import 'package:tech_restock/theme/app_colors.dart';
+import 'package:tech_restock/theme/app_theme.dart';
+import 'package:tech_restock/widgets/primary_button.dart';
 
 /// Bottom sheet to schedule a recurring restock reminder for a product.
 class RestockReminderSheet extends StatefulWidget {

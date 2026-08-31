@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:shop_pandaa/data/media_urls.dart';
-import 'package:shop_pandaa/data/models.dart';
-import 'package:shop_pandaa/services/khata_service.dart';
-import 'package:shop_pandaa/theme/app_colors.dart';
-import 'package:shop_pandaa/theme/app_theme.dart';
-import 'package:shop_pandaa/screens/khata/supplier_ledger_screen.dart';
-import 'package:shop_pandaa/widgets/brand_logo.dart';
-import 'package:shop_pandaa/widgets/product_network_image.dart';
-import 'package:shop_pandaa/widgets/primary_button.dart';
+import 'package:tech_restock/data/media_urls.dart';
+import 'package:tech_restock/data/models.dart';
+import 'package:tech_restock/services/khata_service.dart';
+import 'package:tech_restock/theme/app_colors.dart';
+import 'package:tech_restock/theme/app_theme.dart';
+import 'package:tech_restock/screens/khata/supplier_ledger_screen.dart';
+import 'package:tech_restock/widgets/brand_logo.dart';
+import 'package:tech_restock/widgets/product_network_image.dart';
+import 'package:tech_restock/widgets/primary_button.dart';
 
-/// ThokBazaar's signature screen — the khata: a running udhaar (credit)
+/// TechRestock's signature screen — the khata: a running udhaar (credit)
 /// balance with each wholesale supplier. Lives in the bottom nav.
 class KhataScreen extends StatefulWidget {
   const KhataScreen({super.key, this.showBack = false});

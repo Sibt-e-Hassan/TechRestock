@@ -1,12 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:shop_pandaa/app.dart';
-import 'package:shop_pandaa/theme/app_colors.dart';
-import 'package:shop_pandaa/theme/app_theme.dart';
-import 'package:shop_pandaa/utils/auth_messages.dart';
-import 'package:shop_pandaa/widgets/brand_logo.dart';
-import 'package:shop_pandaa/widgets/gradient_scaffold.dart';
-import 'package:shop_pandaa/widgets/underline_field.dart';
+import 'package:tech_restock/app.dart';
+import 'package:tech_restock/theme/app_colors.dart';
+import 'package:tech_restock/theme/app_theme.dart';
+import 'package:tech_restock/utils/auth_messages.dart';
+import 'package:tech_restock/widgets/brand_logo.dart';
+import 'package:tech_restock/widgets/gradient_scaffold.dart';
+import 'package:tech_restock/widgets/underline_field.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});

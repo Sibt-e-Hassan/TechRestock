@@ -1,7 +1,7 @@
-// License-safe remote image URLs for ThokBazaar (Unsplash + Pexels free licenses).
+// License-safe remote image URLs for TechRestock (Unsplash + Pexels free licenses).
 // Product images and display names: lib/data/catalog_display.dart (sync with tools/seed_catalog.js).
-import 'package:shop_pandaa/data/catalog_display.dart';
-import 'package:shop_pandaa/data/models.dart';
+import 'package:tech_restock/data/catalog_display.dart';
+import 'package:tech_restock/data/models.dart';
 
 class MediaUrls {
   MediaUrls._();

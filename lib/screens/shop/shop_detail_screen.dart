@@ -1,13 +1,13 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:shop_pandaa/app.dart';
-import 'package:shop_pandaa/data/models.dart';
-import 'package:shop_pandaa/theme/app_colors.dart';
-import 'package:shop_pandaa/theme/app_theme.dart';
-import 'package:shop_pandaa/widgets/app_card.dart';
-import 'package:shop_pandaa/widgets/gradient_scaffold.dart';
-import 'package:shop_pandaa/widgets/product_card.dart';
-import 'package:shop_pandaa/widgets/section_head.dart';
+import 'package:tech_restock/app.dart';
+import 'package:tech_restock/data/models.dart';
+import 'package:tech_restock/theme/app_colors.dart';
+import 'package:tech_restock/theme/app_theme.dart';
+import 'package:tech_restock/widgets/app_card.dart';
+import 'package:tech_restock/widgets/gradient_scaffold.dart';
+import 'package:tech_restock/widgets/product_card.dart';
+import 'package:tech_restock/widgets/section_head.dart';
 
 class ShopDetailScreen extends StatelessWidget {
   const ShopDetailScreen({

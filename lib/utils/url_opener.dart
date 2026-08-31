@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shop_pandaa/config/legal_urls.dart';
+import 'package:tech_restock/config/legal_urls.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 Future<bool> openExternalUrl(BuildContext context, String url) async {
@@ -28,7 +28,7 @@ Future<bool> openExternalUrl(BuildContext context, String url) async {
 
 Future<bool> openSupportEmail(
   BuildContext context, {
-  String subject = 'ThokBazaar support',
+  String subject = 'TechRestock support',
   String body = '',
 }) async {
   final uri = Uri(

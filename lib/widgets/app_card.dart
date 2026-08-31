@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shop_pandaa/theme/app_colors.dart';
-import 'package:shop_pandaa/theme/app_theme.dart';
+import 'package:tech_restock/theme/app_colors.dart';
+import 'package:tech_restock/theme/app_theme.dart';
 
 class AppCard extends StatelessWidget {
   const AppCard({

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:shop_pandaa/theme/app_colors.dart';
+import 'package:tech_restock/theme/app_colors.dart';
 
 abstract final class AppTheme {
-  // Tighter radii than a consumer app — ThokBazaar reads like a ledger /
+  // Tighter radii than a consumer app — TechRestock reads like a ledger /
   // business dashboard, so surfaces are more rectangular and data-dense.
   static const double radiusSm = 10;
   static const double radiusLg = 16;
@@ -107,7 +107,7 @@ abstract final class AppTheme {
     );
   }
 
-  /// Brand wordmark style. (Name kept for continuity; ThokBazaar's wordmark is
+  /// Brand wordmark style. (Name kept for continuity; TechRestock's wordmark is
   /// IBM Plex Sans, not a serif.)
   static TextStyle get brandSerif => GoogleFonts.ibmPlexSans(
         fontSize: 26,

@@ -7,7 +7,7 @@
  *   2. Renames the Android package (applicationId + namespace).
  *   3. Moves MainActivity.kt into the new package.
  *
- * Does NOT touch: the Dart package name (`shop_pandaa`) / imports, Firebase
+ * Does NOT touch: the Dart package name (`tech_restock`) / imports, Firebase
  * config, colors, or assets — those are handled by the playbook + other tools.
  *
  * Run from tools/:  node rebrand.js

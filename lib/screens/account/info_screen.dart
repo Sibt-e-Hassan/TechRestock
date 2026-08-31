@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shop_pandaa/theme/app_colors.dart';
-import 'package:shop_pandaa/theme/app_theme.dart';
-import 'package:shop_pandaa/widgets/gradient_scaffold.dart';
+import 'package:tech_restock/theme/app_colors.dart';
+import 'package:tech_restock/theme/app_theme.dart';
+import 'package:tech_restock/widgets/gradient_scaffold.dart';
 
 /// A simple titled information screen (used for Help and About), rendered as a
 /// list of heading + body sections.
@@ -53,13 +53,13 @@ class InfoScreen extends StatelessWidget {
   }
 }
 
-/// Help content for ThokBazaar.
+/// Help content for TechRestock.
 const List<({String heading, String body})> kHelpSections = [
   (
     heading: 'How ordering works',
     body:
         'Browse products by category, add cartons to your order sheet, then send '
-        'an order request. A ThokBazaar rep confirms the price and delivery with '
+        'an order request. A TechRestock rep confirms the price and delivery with '
         'you directly — you are not charged in the app.'
   ),
   (
@@ -76,23 +76,23 @@ const List<({String heading, String body})> kHelpSections = [
   ),
   (
     heading: 'Need more help?',
-    body: 'Email raspharmaceutical51@gmail.com and we will get back to you.'
+    body: 'Email shankhaan0001@gmail.com and we will get back to you.'
   ),
 ];
 
-/// About content for ThokBazaar.
+/// About content for TechRestock.
 const List<({String heading, String body})> kAboutSections = [
   (
-    heading: 'ThokBazaar',
+    heading: 'TechRestock',
     body:
-        'Wholesale ordering for shopkeepers. Restock your dukaan at wholesale '
-        'rates — order FMCG stock in bulk and never run out of your best-sellers.'
+        'Wholesale mobile accessories & tech supplies ordering for retail stores and repair shops. '
+        'Restock your store at wholesale rates — order fast chargers, cables, cases, and repair parts in bulk.'
   ),
   (
     heading: 'Who it is for',
     body:
-        'General stores, karyana shops, and mini-marts that restock regularly from '
-        'wholesale suppliers.'
+        'Mobile accessory stores, electronics retailers, and tech repair shops that restock regularly from '
+        'wholesale importers and hardware distributors.'
   ),
-  (heading: 'Version', body: 'ThokBazaar v2.0.5'),
+  (heading: 'Version', body: 'TechRestock v2.0.5'),
 ];

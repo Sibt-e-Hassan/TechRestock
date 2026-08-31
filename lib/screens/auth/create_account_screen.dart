@@ -1,14 +1,14 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:shop_pandaa/config/legal_urls.dart';
-import 'package:shop_pandaa/theme/app_colors.dart';
-import 'package:shop_pandaa/theme/app_theme.dart';
-import 'package:shop_pandaa/utils/auth_messages.dart';
-import 'package:shop_pandaa/widgets/brand_logo.dart';
-import 'package:shop_pandaa/widgets/gradient_scaffold.dart';
-import 'package:shop_pandaa/widgets/legal_link.dart';
-import 'package:shop_pandaa/widgets/underline_field.dart';
+import 'package:tech_restock/config/legal_urls.dart';
+import 'package:tech_restock/theme/app_colors.dart';
+import 'package:tech_restock/theme/app_theme.dart';
+import 'package:tech_restock/utils/auth_messages.dart';
+import 'package:tech_restock/widgets/brand_logo.dart';
+import 'package:tech_restock/widgets/gradient_scaffold.dart';
+import 'package:tech_restock/widgets/legal_link.dart';
+import 'package:tech_restock/widgets/underline_field.dart';
 
 class CreateAccountScreen extends StatefulWidget {
   const CreateAccountScreen({super.key});
@@ -111,7 +111,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
               Text('Sign up', style: Theme.of(context).textTheme.headlineLarge),
               const SizedBox(height: 6),
               Text(
-                'Register your dukaan to order wholesale stock',
+                'Register your store to order wholesale tech stock',
                 style: Theme.of(context).textTheme.bodyMedium,
               ),
               const SizedBox(height: 28),
@@ -122,7 +122,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
               ),
               const SizedBox(height: 20),
               UnderlineField(
-                label: 'Dukaan name (store name)',
+                label: 'Store / Shop name',
                 controller: _dukaan,
                 textCapitalization: TextCapitalization.words,
               ),

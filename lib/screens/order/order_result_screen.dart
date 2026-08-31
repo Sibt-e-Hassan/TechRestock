@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:shop_pandaa/screens/orders/orders_screen.dart';
-import 'package:shop_pandaa/theme/app_colors.dart';
-import 'package:shop_pandaa/theme/app_theme.dart';
-import 'package:shop_pandaa/widgets/brand_logo.dart';
-import 'package:shop_pandaa/widgets/gradient_scaffold.dart';
-import 'package:shop_pandaa/widgets/primary_button.dart';
+import 'package:tech_restock/screens/orders/orders_screen.dart';
+import 'package:tech_restock/theme/app_colors.dart';
+import 'package:tech_restock/theme/app_theme.dart';
+import 'package:tech_restock/widgets/brand_logo.dart';
+import 'package:tech_restock/widgets/gradient_scaffold.dart';
+import 'package:tech_restock/widgets/primary_button.dart';
 
 /// Full-screen result shown after a shopkeeper sends an order request:
 /// a celebratory "accepted" state, or a "failed — try again" state.
@@ -61,7 +61,7 @@ class OrderResultScreen extends StatelessWidget {
               const SizedBox(height: 10),
               Text(
                 success
-                    ? 'Your order request has been placed and sent to ThokBazaar. '
+                    ? 'Your order request has been placed and sent to TechRestock. '
                         'Our team will confirm price and delivery with you shortly.'
                     : (message == null || message!.isEmpty
                         ? 'Something went wrong while sending your order.'

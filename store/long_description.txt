@@ -1,33 +1,31 @@
-ThokBazaar is the wholesale ordering app built for shopkeepers. Restock your dukaan at wholesale rates — order FMCG stock in bulk, track what you owe each supplier, and never run out of your best-sellers, all from your phone.
+TechRestock is the B2B wholesale ordering platform built for retail store owners and repair technicians. Restock your store at wholesale rates — order mobile accessories, chargers, cables, screen protection, audio gear, and repair parts in bulk, track what you owe each supplier, and never run out of top sellers.
 
-Instead of travelling to the wholesale market to restock, browse the full catalogue by category, order cartons in bulk, and send your order request in seconds.
+Instead of travelling to crowded electronics markets, browse wholesale inventory by category, order in master cartons or bulk inner boxes, and submit your order request in seconds.
 
 WHAT YOU CAN DO
 
-• Shop by category: Browse Dairy, Confectionery, Soaps, Shampoos, Sauces, Flour, Sugar, Pulses, Rice, Pasta, Noodles, Cooking Oil, Tea & Coffee, Beverages, Snacks, Spices, and Cleaning — with trusted brands in every aisle.
+• Shop by category: Browse Chargers & Power, Cables & Adapters, Cases & Covers, Screen Glass, Audio & Earbuds, Power Banks, Car Accessories, Memory & Storage, Repair Parts, and Smart Gadgets — with verified wholesale suppliers in every category.
 
-• Order in bulk: Every product shows its minimum order quantity and wholesale bulk-pricing tiers — the more cartons you order, the lower your per-unit rate. Your current rate is highlighted as you change the quantity.
+• Order in bulk: Every item shows minimum order quantities (MOQ) and tiered bulk volume discounts — the larger your batch order, the lower your per-unit cost.
 
-• Order sheet: Add cartons to your order sheet, review quantities, and send a bulk order request. A ThokBazaar rep confirms price and delivery with you directly.
+• Order sheet: Build your inventory sheet, review quantities, and send a bulk order request instantly. A TechRestock distributor representative confirms final pricing and delivery options directly with you.
 
-• Khata (udhaar) ledger: Keep a running credit balance with each supplier — record goods taken on udhaar and payments made, and the outstanding balance updates automatically. Your khata stays private on your device.
+• Supplier ledger: Keep a running credit ledger with each distributor — record goods received on credit and payments made, with outstanding balances updated automatically. Your ledger stays 100% private on your device.
 
-• Restock reminders: Set a reminder on any product to be nudged when it is time to reorder, so fast-moving stock never runs out.
+• Stock reminders: Set automated reorder reminders on high-turnover items (fast chargers, Type-C cables, tempered glass) so your store shelves stay fully stocked.
 
-• Offers: See bulk deals and wholesale discounts in one place.
+• Offers & Deals: Access bulk clearance deals and distributor promotions in one place.
 
-• Orders: Keep a history of every order request you have sent.
+• Order history: Track past inventory requests and supplier orders effortlessly.
 
-• Your account: Register your dukaan with your name and store name, update your profile, change your password, and delete your account and data any time from within the app.
+• Account management: Register with your retail store name, update profile settings, and manage account deletion anytime within the app.
 
 PLEASE NOTE
 
-ThokBazaar is a wholesale ordering and inquiry app. Order requests are non-binding — price and delivery are confirmed directly with the ThokBazaar team. Prices shown are wholesale reference rates.
-
-An internet connection is required to load the catalogue and send orders.
+TechRestock is a wholesale ordering and B2B trade inquiry app. Order requests are non-binding inquiries — final price, shipping, and delivery terms are confirmed directly with the TechRestock team.
 
 PRIVACY
 
-We use Firebase Authentication to sign you in and Cloud Firestore to store your dukaan profile, order sheet, and order requests. Your khata and restock reminders are stored only on your device. We do not sell your data. You can delete your account and associated data at any time from the app, or by contacting us.
+We use Firebase Authentication to secure your sign-in and Cloud Firestore for your store profile and order inquiries. Your supplier ledger and restock reminders remain device-local. We do not sell your personal data. You can delete your account and data at any time in-app or via our online deletion request page.
 
-We keep adding products, brands, and features over time. For feedback or questions, email raspharmaceutical51@gmail.com.
+For feedback or inquiries, contact us at shankhaan0001@gmail.com.

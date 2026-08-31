@@ -1,4 +1,4 @@
-# shop_pandaa
+# tech_restock
 
 A new Flutter project.
 

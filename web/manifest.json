@@ -1,6 +1,6 @@
 {
-    "name": "shop_pandaa",
-    "short_name": "shop_pandaa",
+    "name": "tech_restock",
+    "short_name": "tech_restock",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#1B3A57",

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:shop_pandaa/app.dart';
-import 'package:shop_pandaa/data/media_urls.dart';
-import 'package:shop_pandaa/data/models.dart';
-import 'package:shop_pandaa/theme/app_colors.dart';
-import 'package:shop_pandaa/theme/app_theme.dart';
-import 'package:shop_pandaa/utils/catalog_search.dart';
-import 'package:shop_pandaa/widgets/filter_chip.dart';
-import 'package:shop_pandaa/widgets/brand_logo.dart';
-import 'package:shop_pandaa/widgets/gradient_scaffold.dart';
-import 'package:shop_pandaa/widgets/product_card.dart';
-import 'package:shop_pandaa/widgets/product_network_image.dart';
+import 'package:tech_restock/app.dart';
+import 'package:tech_restock/data/media_urls.dart';
+import 'package:tech_restock/data/models.dart';
+import 'package:tech_restock/theme/app_colors.dart';
+import 'package:tech_restock/theme/app_theme.dart';
+import 'package:tech_restock/utils/catalog_search.dart';
+import 'package:tech_restock/widgets/filter_chip.dart';
+import 'package:tech_restock/widgets/brand_logo.dart';
+import 'package:tech_restock/widgets/gradient_scaffold.dart';
+import 'package:tech_restock/widgets/product_card.dart';
+import 'package:tech_restock/widgets/product_network_image.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key, this.onClose});
@@ -334,7 +334,7 @@ class _EmptySearchPrompt extends StatelessWidget {
           child: const Icon(Icons.manage_search, size: 36, color: AppColors.teal),
         ),
         const SizedBox(height: 20),
-        Text('Search ThokBazaar', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontSize: 18)),
+        Text('Search TechRestock', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontSize: 18)),
         const SizedBox(height: 8),
         Text(
           'Type a product, brand, or category to find wholesale stock.',

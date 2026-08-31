@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:shop_pandaa/data/models.dart';
+import 'package:tech_restock/data/models.dart';
 
 /// Live catalog + client-side text search for products and shops.
 class CatalogSearch {

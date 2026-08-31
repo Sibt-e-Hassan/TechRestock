@@ -1,15 +1,15 @@
 {
   "project_info": {
     "project_number": "395999364947",
-    "project_id": "thokbazaar-4a79a",
-    "storage_bucket": "thokbazaar-4a79a.firebasestorage.app"
+    "project_id": "techrestock-b2b",
+    "storage_bucket": "techrestock-b2b.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:395999364947:android:39ef58eb70e27b6a5583a6",
         "android_client_info": {
-          "package_name": "com.thokbazaar.app"
+          "package_name": "com.techrestock.app"
         }
       },
       "oauth_client": [],

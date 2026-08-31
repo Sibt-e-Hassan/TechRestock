@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:shop_pandaa/data/catalog_display.dart';
+import 'package:tech_restock/data/catalog_display.dart';
 
 /// A wholesale price break: buy [minQty] or more of a unit and pay
-/// [priceLabel] per unit. Powers ThokBazaar's bulk-pricing table.
+/// [priceLabel] per unit. Powers TechRestock's bulk-pricing table.
 class PriceTier {
   const PriceTier({required this.minQty, required this.priceLabel});
 
@@ -45,7 +45,7 @@ class ProductItem {
   final String? shopId;
   final String? imageUrl;
 
-  // --- ThokBazaar wholesale fields (optional; backward-compatible) ---
+  // --- TechRestock wholesale fields (optional; backward-compatible) ---
   /// Selling unit for wholesale, e.g. "carton", "dozen", "kg", "bori".
   final String? unit;
 
@@ -285,7 +285,7 @@ class OrderRecord {
 }
 
 // ===========================================================================
-// ThokBazaar B2B models — stored locally (shared_preferences), not Firestore.
+// TechRestock B2B models — stored locally (shared_preferences), not Firestore.
 // The khata (running supplier credit) is the shopkeeper's private ledger; the
 // restock reminders are personal scheduling. Both are device-local by design.
 // ===========================================================================

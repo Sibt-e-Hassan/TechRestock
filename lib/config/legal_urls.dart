@@ -3,8 +3,8 @@
 /// Hosted on Firebase Hosting (`web_docs/`). Redeploy with:
 ///   firebase deploy --only hosting
 abstract final class LegalUrls {
-  static const privacyPolicy = 'https://thokbazaar-4a79a.web.app/privacy';
-  static const termsOfService = 'https://thokbazaar-4a79a.web.app/terms';
-  static const accountDeletion = 'https://thokbazaar-4a79a.web.app/delete';
-  static const supportEmail = 'raspharmaceutical51@gmail.com';
+  static const privacyPolicy = 'https://techrestock-app.web.app/privacy';
+  static const termsOfService = 'https://techrestock-app.web.app/terms';
+  static const accountDeletion = 'https://techrestock-app.web.app/delete';
+  static const supportEmail = 'shankhaan0001@gmail.com';
 }

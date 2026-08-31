@@ -3,16 +3,16 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:shop_pandaa/app.dart';
-import 'package:shop_pandaa/data/categories.dart';
-import 'package:shop_pandaa/data/media_urls.dart';
-import 'package:shop_pandaa/data/models.dart';
-import 'package:shop_pandaa/screens/category/category_products_screen.dart';
-import 'package:shop_pandaa/theme/app_colors.dart';
-import 'package:shop_pandaa/theme/app_theme.dart';
-import 'package:shop_pandaa/widgets/brand_logo.dart';
-import 'package:shop_pandaa/widgets/cart_scope.dart';
-import 'package:shop_pandaa/widgets/product_network_image.dart';
+import 'package:tech_restock/app.dart';
+import 'package:tech_restock/data/categories.dart';
+import 'package:tech_restock/data/media_urls.dart';
+import 'package:tech_restock/data/models.dart';
+import 'package:tech_restock/screens/category/category_products_screen.dart';
+import 'package:tech_restock/theme/app_colors.dart';
+import 'package:tech_restock/theme/app_theme.dart';
+import 'package:tech_restock/widgets/brand_logo.dart';
+import 'package:tech_restock/widgets/cart_scope.dart';
+import 'package:tech_restock/widgets/product_network_image.dart';
 
 // Ink colours for the white lower sheet (theme text is white on the navy
 // header, so this screen uses explicit dark tones for the paper area).
@@ -115,7 +115,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Text(
                                     (dukaan != null && dukaan.isNotEmpty)
                                         ? dukaan
-                                        : 'ThokBazaar',
+                                        : 'TechRestock',
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
                                     style: GoogleFonts.ibmPlexSans(

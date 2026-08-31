@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:shop_pandaa/app.dart';
-import 'package:shop_pandaa/data/media_urls.dart';
-import 'package:shop_pandaa/data/models.dart';
-import 'package:shop_pandaa/screens/order/order_result_screen.dart';
-import 'package:shop_pandaa/services/cart_service.dart';
-import 'package:shop_pandaa/theme/app_colors.dart';
-import 'package:shop_pandaa/theme/app_theme.dart';
-import 'package:shop_pandaa/widgets/brand_logo.dart';
-import 'package:shop_pandaa/widgets/cart_scope.dart';
-import 'package:shop_pandaa/widgets/gradient_scaffold.dart';
-import 'package:shop_pandaa/widgets/primary_button.dart';
-import 'package:shop_pandaa/widgets/product_network_image.dart';
+import 'package:tech_restock/app.dart';
+import 'package:tech_restock/data/media_urls.dart';
+import 'package:tech_restock/data/models.dart';
+import 'package:tech_restock/screens/order/order_result_screen.dart';
+import 'package:tech_restock/services/cart_service.dart';
+import 'package:tech_restock/theme/app_colors.dart';
+import 'package:tech_restock/theme/app_theme.dart';
+import 'package:tech_restock/widgets/brand_logo.dart';
+import 'package:tech_restock/widgets/cart_scope.dart';
+import 'package:tech_restock/widgets/gradient_scaffold.dart';
+import 'package:tech_restock/widgets/primary_button.dart';
+import 'package:tech_restock/widgets/product_network_image.dart';
 
 class CartScreen extends StatefulWidget {
   const CartScreen({super.key});

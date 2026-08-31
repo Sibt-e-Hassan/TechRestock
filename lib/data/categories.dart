@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-/// A wholesale product category shown on the ThokBazaar home screen. Each
-/// category carries an icon "logo" that represents it in the grid and section
+/// A wholesale tech product category shown on the TechRestock home screen. Each
+/// category carries an icon that represents it in the grid and section
 /// headers. Product docs reference a category by its [name].
 class WholesaleCategory {
   const WholesaleCategory({required this.name, required this.icon});
@@ -10,26 +10,18 @@ class WholesaleCategory {
   final IconData icon;
 }
 
-/// Canonical list of the categories a dukaan orders from ThokBazaar. The
-/// `name` is what a product's `category` field must match (case-insensitive).
+/// Canonical list of categories a tech retailer orders from TechRestock.
 const List<WholesaleCategory> kWholesaleCategories = [
-  WholesaleCategory(name: 'Dairy Products', icon: Icons.egg_alt_outlined),
-  WholesaleCategory(name: 'Confectionery', icon: Icons.cake_outlined),
-  WholesaleCategory(name: 'Soaps', icon: Icons.soap_outlined),
-  WholesaleCategory(name: 'Shampoos', icon: Icons.shower_outlined),
-  WholesaleCategory(name: 'Sauces', icon: Icons.lunch_dining_outlined),
-  WholesaleCategory(name: 'Flour', icon: Icons.bakery_dining_outlined),
-  WholesaleCategory(name: 'Sugar', icon: Icons.cookie_outlined),
-  WholesaleCategory(name: 'Pulses', icon: Icons.grass_outlined),
-  WholesaleCategory(name: 'Rice', icon: Icons.rice_bowl_outlined),
-  WholesaleCategory(name: 'Pasta', icon: Icons.dinner_dining_outlined),
-  WholesaleCategory(name: 'Noodles', icon: Icons.ramen_dining_outlined),
-  WholesaleCategory(name: 'Cooking Oil', icon: Icons.water_drop_outlined),
-  WholesaleCategory(name: 'Tea & Coffee', icon: Icons.coffee_outlined),
-  WholesaleCategory(name: 'Beverages', icon: Icons.local_drink_outlined),
-  WholesaleCategory(name: 'Snacks', icon: Icons.fastfood_outlined),
-  WholesaleCategory(name: 'Spices', icon: Icons.soup_kitchen_outlined),
-  WholesaleCategory(name: 'Cleaning', icon: Icons.cleaning_services_outlined),
+  WholesaleCategory(name: 'Chargers & Power', icon: Icons.power_outlined),
+  WholesaleCategory(name: 'Cables & Adapters', icon: Icons.cable_outlined),
+  WholesaleCategory(name: 'Cases & Covers', icon: Icons.smartphone_outlined),
+  WholesaleCategory(name: 'Screen Glass', icon: Icons.screen_lock_portrait_outlined),
+  WholesaleCategory(name: 'Audio & Earbuds', icon: Icons.headphones_outlined),
+  WholesaleCategory(name: 'Power Banks', icon: Icons.battery_charging_full_outlined),
+  WholesaleCategory(name: 'Car Accessories', icon: Icons.directions_car_outlined),
+  WholesaleCategory(name: 'Memory & Storage', icon: Icons.sd_card_outlined),
+  WholesaleCategory(name: 'Repair Parts', icon: Icons.build_outlined),
+  WholesaleCategory(name: 'Smart Gadgets', icon: Icons.watch_outlined),
 ];
 
 /// Icon for a category name (case-insensitive); a generic box if unknown.
@@ -41,3 +33,4 @@ IconData iconForCategory(String? name) {
   }
   return Icons.inventory_2_outlined;
 }
+
